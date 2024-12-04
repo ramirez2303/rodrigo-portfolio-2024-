@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const NavbarItemContainer = styled(Flex)`
     flex-direction: column;
     transition: 100ms ease-in-out;
+    position: relative;
 
     &:active {
         opacity: 0.5;

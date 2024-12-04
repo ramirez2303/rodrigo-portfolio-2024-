@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import styled from "styled-components";
 
 export const LayoutWrapper = styled(Box)`
@@ -8,10 +8,10 @@ export const LayoutWrapper = styled(Box)`
     overflow-x: hidden;
 `;
 
-export const LayoutContainer = styled(Box)`
-    /* max-width: 1200px; */
+export const LayoutContainer = styled(Flex)`
+    max-width: 1200px;
+    justify-content: center;
     margin: 0 auto;
-    padding-top: 20px;
     box-sizing: border-box;
     overflow-x: hidden;
     position: relative;

@@ -8,8 +8,6 @@ export const NavbarContainer = styled(Flex)`
     position: fixed;
     z-index: 1;
     top: 20px;
-    right: 0;
-    left: 0;
 
     padding: 10px;
     box-sizing: border-box;
