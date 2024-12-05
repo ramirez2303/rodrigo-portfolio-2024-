@@ -9,7 +9,6 @@ export const LayoutWrapper = styled(Box)`
 `;
 
 export const LayoutContainer = styled(Flex)`
-    max-width: 1200px;
     justify-content: center;
     margin: 0 auto;
     box-sizing: border-box;

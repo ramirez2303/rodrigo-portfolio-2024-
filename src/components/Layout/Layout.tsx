@@ -2,12 +2,25 @@ import { Box as HomeBg } from "@chakra-ui/react";
 import Navbar from "../Navbar";
 import { LayoutContainer, LayoutWrapper } from "./style";
 import homeBg from "../../assets/home-bg.webp";
+import { useEffect, useState } from "react";
 
 type LayoutProps = {
     children: React.ReactNode;
 };
 
 const Layout = ({ children }: LayoutProps) => {
+    const [visible, setVisible] = useState(true);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setVisible(window.scrollY < 800);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    });
+
     return (
         <LayoutWrapper>
             <HomeBg
@@ -19,7 +32,7 @@ const Layout = ({ children }: LayoutProps) => {
                 h="100vh"
             />
             <LayoutContainer>
-                <Navbar />
+                <Navbar isVisible={visible} />
                 {children}
             </LayoutContainer>
         </LayoutWrapper>

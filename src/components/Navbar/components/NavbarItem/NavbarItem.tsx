@@ -1,25 +1,44 @@
-import { Flex, Icon } from "@chakra-ui/react";
+import { Flex, Icon, Link } from "@chakra-ui/react";
 import { AnimatedBarItem, NavbarItemContainer, TextItem } from "./style";
+import { Tooltip } from "@/components/ui/tooltip";
 
 type NavbarItemProps = {
     text: string;
     link: string;
     icon?: JSX.Element;
+    isVisible: boolean;
 };
 
-const NavbarItem = ({ text, link, icon }: NavbarItemProps) => {
+const NavbarItem = ({ text, link, icon, isVisible }: NavbarItemProps) => {
     return (
-        <NavbarItemContainer cursor="pointer">
-            <Flex justifyContent="flex-start" alignItems="center" gap="7px">
-                <Icon fontSize="18px" color="chocolate">
-                    {icon}
-                </Icon>
-                <TextItem fontSize="md" fontWeight="semibold">
-                    {text}
-                </TextItem>
-            </Flex>
-            <AnimatedBarItem />
-        </NavbarItemContainer>
+        <Link
+            variant="plain"
+            href={link}
+            style={{ textDecoration: "none", outline: "none" }}
+        >
+            <Tooltip content={text} openDelay={100} closeDelay={100}>
+                <NavbarItemContainer cursor="pointer">
+                    <Flex
+                        justifyContent="flex-start"
+                        alignItems="center"
+                        gap="7px"
+                    >
+                        <Icon fontSize="18px" color="chocolate">
+                            {icon}
+                        </Icon>
+                        <TextItem
+                            fontSize="md"
+                            fontWeight="semibold"
+                            display={isVisible ? "flex" : "none"}
+                            transition="0.3s"
+                        >
+                            {text}
+                        </TextItem>
+                    </Flex>
+                    <AnimatedBarItem />
+                </NavbarItemContainer>
+            </Tooltip>
+        </Link>
     );
 };
 
