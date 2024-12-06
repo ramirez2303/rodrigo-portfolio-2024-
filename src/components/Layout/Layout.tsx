@@ -1,4 +1,4 @@
-import { Box as HomeBg } from "@chakra-ui/react";
+import { Box as HomeBg, Text } from "@chakra-ui/react";
 import Navbar from "../Navbar";
 import { LayoutContainer, LayoutWrapper } from "./style";
 import homeBg from "../../assets/home-bg.webp";
@@ -23,6 +23,9 @@ const Layout = ({ children }: LayoutProps) => {
 
     return (
         <LayoutWrapper>
+            <Text position="fixed" bottom="10px" left="10px" zIndex={1}>
+                #ColapintoToF1In2025
+            </Text>
             <HomeBg
                 bgImage={`url(${homeBg})`}
                 bgSize="cover"

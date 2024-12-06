@@ -7,6 +7,7 @@ export const LayoutWrapper = styled(Flex)`
     overflow-x: hidden;
     flex-direction: column;
     align-items: center;
+    position: relative;
 `;
 
 export const LayoutContainer = styled(Flex)`
