@@ -3,8 +3,15 @@ import styled from "styled-components";
 
 export const NavbarItemContainer = styled(Flex)`
     flex-direction: column;
-    transition: 100ms ease-in-out;
+    transition: 100ms ease-in-out, transform 200ms ease-in-out;
     position: relative;
+
+    padding: 12px;
+    box-sizing: border-box;
+
+    &:hover {
+        transform: scale(1.2);
+    }
 
     &:active {
         opacity: 0.5;

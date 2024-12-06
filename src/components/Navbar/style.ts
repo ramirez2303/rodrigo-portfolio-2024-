@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const NavbarContainer = styled(Flex)<{ isVisible: boolean }>`
     width: ${({ isVisible }) => (isVisible ? "800px" : "300px")};
-    gap: ${({ isVisible }) => (isVisible ? "0" : "30px")};
+    gap: ${({ isVisible }) => (isVisible ? "0" : "10px")};
     height: 60px;
     margin: 0 auto;
     position: fixed;
