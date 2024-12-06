@@ -31,10 +31,8 @@ const Layout = ({ children }: LayoutProps) => {
                 w="100vw"
                 h="100vh"
             />
-            <LayoutContainer>
-                <Navbar isVisible={visible} />
-                {children}
-            </LayoutContainer>
+            <Navbar isVisible={visible} />
+            <LayoutContainer>{children}</LayoutContainer>
         </LayoutWrapper>
     );
 };

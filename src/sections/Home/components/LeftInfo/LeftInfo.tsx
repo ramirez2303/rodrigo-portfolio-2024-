@@ -37,7 +37,12 @@ const LeftInfo = () => {
                 </Text>
             </Stack>
 
-            <Flex gap="15px" mt="15px" alignItems="center">
+            <Flex
+                gap="20px"
+                mt="15px"
+                justifyContent="flex-start"
+                alignItems="center"
+            >
                 <Flex alignItems="center" gap="7px" cursor="pointer">
                     <Icon
                         fontSize="22px"

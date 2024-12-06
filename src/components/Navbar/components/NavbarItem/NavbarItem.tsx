@@ -23,7 +23,7 @@ const NavbarItem = ({ text, link, icon, isVisible }: NavbarItemProps) => {
                         alignItems="center"
                         gap="7px"
                     >
-                        <Icon fontSize="18px" color="chocolate">
+                        <Icon fontSize="20px" color="chocolate">
                             {icon}
                         </Icon>
                         <TextItem

@@ -15,3 +15,13 @@ export const HomeContainer = styled(motion.div)`
         rgba(119, 141, 169, 0.2) 100%
     );
 `;
+
+export const AnimatedContainer = styled(motion.div)`
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 200px;
+`;

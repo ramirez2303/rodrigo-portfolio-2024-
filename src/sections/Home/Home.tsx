@@ -1,22 +1,16 @@
-import { Flex, Stack } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import LeftInfo from "./components/LeftInfo";
 import RightInfo from "./components/RightInfo";
-import { HomeContainer } from "./style";
+import { AnimatedContainer, HomeContainer } from "./style.ts";
 // import BottomInfo from "./components/BottomInfo";
 
 const Home = () => {
     return (
-        <HomeContainer
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 2, duration: 1 }}
-        >
-            <Stack
-                maxWidth="800px"
-                width="100%"
-                justifyContent="flex-start"
-                alignItems="center"
-                gap="200px"
+        <HomeContainer>
+            <AnimatedContainer
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
             >
                 <Flex
                     width="100%"
@@ -27,7 +21,7 @@ const Home = () => {
                     <RightInfo />
                 </Flex>
                 {/* <BottomInfo /> */}
-            </Stack>
+            </AnimatedContainer>
         </HomeContainer>
     );
 };
