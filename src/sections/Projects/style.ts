@@ -30,17 +30,11 @@ export const ProjectsGridContainer = styled(Box)`
         z-index: 1;
         cursor: default;
         margin-left: 50px;
-        &:hover {
-            transition: transform 300ms ease-in-out,
-                box-shadow 300ms ease-in-out;
-            box-shadow: rgba(0, 0, 0, 0.11) 0px 22px 70px 4px;
-            transform: scale(0.99);
-        }
         &:active {
             box-shadow: rgba(0, 0, 0, 0.4) 0px 22px 70px 4px;
             transition: transform 300ms ease-in-out,
                 box-shadow 300ms ease-in-out;
-            transform: scale(0.96);
+            transform: scale(0.99);
         }
     }
 

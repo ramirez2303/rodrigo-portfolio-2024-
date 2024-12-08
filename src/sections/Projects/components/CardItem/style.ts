@@ -23,7 +23,7 @@ export const CardItemContainer = styled(Flex)<{ isSelected: boolean }>`
 
         &:active {
           background: rgba(119, 141, 169, 1);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: rgba(0, 0, 0, 0.4) 0px 22px 70px 4px;
           left: 20px;
         }`}
 `;
