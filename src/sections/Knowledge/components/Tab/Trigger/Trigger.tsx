@@ -10,8 +10,9 @@ const Trigger = ({ values }: TriggerProps) => {
         <Fragment>
             <Tabs.Trigger
                 value={values.value}
-                _selected={{ bgColor: "#0d1b2a" }}
-                bgColor="transparent"
+                color="#f8f0f0"
+                fontSize="lg"
+                fontWeight="semibold"
             >
                 {values.label}
             </Tabs.Trigger>

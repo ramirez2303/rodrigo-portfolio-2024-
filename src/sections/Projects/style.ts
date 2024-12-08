@@ -4,12 +4,6 @@ import styled from "styled-components";
 export const ProjectsWrapper = styled(Stack)`
     width: 100%;
     height: 100vh;
-    background: linear-gradient(
-        -144deg,
-        rgba(13, 27, 42, 1) 0%,
-        rgba(119, 141, 169, 0.2) 100%
-    );
-
     justify-content: center;
     align-items: center;
     position: relative;

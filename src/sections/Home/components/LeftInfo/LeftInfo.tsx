@@ -1,5 +1,6 @@
-import { Flex, Icon, Stack, Text } from "@chakra-ui/react";
+import { Button, Flex, Icon, Stack, Text } from "@chakra-ui/react";
 import { VscGithubInverted } from "react-icons/vsc";
+import { FaLinkedin } from "react-icons/fa";
 
 const LeftInfo = () => {
     return (
@@ -11,26 +12,17 @@ const LeftInfo = () => {
                 <Text
                     fontSize="xl"
                     fontWeight="semibold"
-                    opacity={0.7}
-                    mt="-5px"
+                    opacity={0.9}
+                    mt="-7px"
                 >
                     Desarrollador Frontend
                 </Text>
+            </Stack>
+            <Stack gap="0px" mt="5px">
                 <Text
                     fontSize="xl"
                     fontWeight="semibold"
-                    opacity={0.7}
-                    mt="-5px"
-                >
-                    React - Typescript
-                </Text>
-            </Stack>
-
-            <Stack gap="0px" mt="10px">
-                <Text
-                    fontSize="lg"
-                    fontWeight="regular"
-                    opacity={0.7}
+                    opacity={0.9}
                     mt="-5px"
                 >
                     Balcarce, Buenos Aires, Argentina
@@ -39,34 +31,36 @@ const LeftInfo = () => {
 
             <Flex
                 gap="20px"
-                mt="15px"
+                mt="10px"
                 justifyContent="flex-start"
                 alignItems="center"
             >
-                <Flex alignItems="center" gap="7px" cursor="pointer">
-                    <Icon
-                        fontSize="22px"
-                        color="#f2f2f2"
-                        _hover={{ color: "rgba(119, 141, 169, 0.3)" }}
-                    >
+                <Button
+                    colorPalette="fg"
+                    variant="outline"
+                    size="lg"
+                    borderRadius="md"
+                >
+                    <Icon fontSize="22px" color="#f2f2f2">
                         <VscGithubInverted />
                     </Icon>
-                    <Text fontSize="lg" fontWeight="medium" opacity={0.7}>
+                    <Text fontSize="lg" fontWeight="medium" color="#f2f2f2">
                         Linkedin
                     </Text>
-                </Flex>
-                <Flex alignItems="center" gap="7px" cursor="pointer">
-                    <Icon
-                        fontSize="22px"
-                        color="#f2f2f2"
-                        _hover={{ color: "rgba(119, 141, 169, 0.3)" }}
-                    >
-                        <VscGithubInverted />
+                </Button>
+                <Button
+                    colorPalette="fg"
+                    variant="outline"
+                    size="lg"
+                    borderRadius="md"
+                >
+                    <Icon fontSize="22px" color="#f2f2f2">
+                        <FaLinkedin />
                     </Icon>
-                    <Text fontSize="lg" fontWeight="medium" opacity={0.7}>
+                    <Text fontSize="lg" fontWeight="medium" color="#f2f2f2">
                         Github
                     </Text>
-                </Flex>
+                </Button>
             </Flex>
         </Stack>
     );

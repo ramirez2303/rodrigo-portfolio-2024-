@@ -8,20 +8,16 @@ export const HomeContainer = styled(motion.div)`
     justify-content: center;
     align-items: center;
     gap: 50px;
-    background: rgb(13, 27, 42);
-    background: linear-gradient(
-        144deg,
-        rgba(13, 27, 42, 1) 0%,
-        rgba(119, 141, 169, 0.2) 100%
-    );
+    background-color: rgba(141, 65, 65, 0.3);
 `;
 
 export const AnimatedContainer = styled(motion.div)`
-    max-width: 800px;
+    max-width: 1000px;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     gap: 200px;
+    z-index: 1;
 `;

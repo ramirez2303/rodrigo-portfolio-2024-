@@ -19,6 +19,14 @@ const useSelectedCard = () => {
         if (cards.length > 0 && !activeCard) setActiveCard(cards[0]);
     }, [activeCard]);
 
+    useEffect(() => {
+        return () => {
+            settotalCards(undefined);
+            setActiveCard(undefined);
+            setIndexSelected(1);
+        };
+    }, []);
+
     const changeGrid = (el: HTMLElement) => {
         if (el === activeCard) return;
 

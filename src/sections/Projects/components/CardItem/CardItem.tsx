@@ -1,4 +1,3 @@
-import { Tooltip } from "@/components/ui/tooltip";
 import { CardItemContainer } from "./style";
 
 type CardItemProps = {
@@ -15,22 +14,14 @@ const CardItem = ({
     onClick,
 }: CardItemProps) => {
     return (
-        <Tooltip
-            content="Ir a proyecto"
-            positioning={{ placement: "right" }}
-            openDelay={0}
-            closeDelay={100}
-            disabled={!isSelected}
+        <CardItemContainer
+            className={className}
+            data-grid={dataGrid}
+            isSelected={isSelected}
+            onClick={(e) => onClick(e.target as HTMLDivElement)}
         >
-            <CardItemContainer
-                className={className}
-                data-grid={dataGrid}
-                isSelected={isSelected}
-                onClick={(e) => onClick(e.target as HTMLDivElement)}
-            >
-                <>{className}</>
-            </CardItemContainer>
-        </Tooltip>
+            <>{className}</>
+        </CardItemContainer>
     );
 };
 

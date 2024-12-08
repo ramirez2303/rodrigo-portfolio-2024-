@@ -1,62 +1,98 @@
-import { ContentType } from "@/utils/types";
-import { For, Grid, GridItem, Link, Stack, Tabs } from "@chakra-ui/react";
-import { Fragment } from "react";
-import { ContentContainer } from "./style";
+import { tabType } from "@/utils/types";
+import { For, Image, Link, Stack, Text } from "@chakra-ui/react";
+import { useEffect } from "react";
+import {
+    AnimatedTabContainer,
+    AnimatedContainer,
+    ContentContainer,
+} from "./style";
+import { animate, useMotionValue } from "motion/react";
+import { Tooltip } from "@/components/ui/tooltip";
 
 type ContentProps = {
-    values: {
-        value: string;
-        label: string;
-        content: ContentType[];
-        icon: string;
-    };
+    values: tabType;
 };
 
 const Content = ({ values }: ContentProps) => {
+    const isLibraries = values.value === "libraries";
+    const xTranslation = useMotionValue(0);
+
+    useEffect(() => {
+        const controls = animate(xTranslation, [-300, 300], {
+            ease: "linear",
+            duration: 20,
+            repeat: Infinity,
+            repeatType: "loop",
+            repeatDelay: 0,
+        });
+
+        return () => controls.stop();
+    }, [xTranslation]);
+
     return (
-        <Fragment>
-            <Tabs.Content value={values.value}>
-                <ContentContainer>
-                    <Grid
-                        templateColumns="repeat(2, 1fr)"
-                        templateRows="repeat(2, 1fr)"
-                        rowGap="10"
-                        w={["100%", "100%", "100%", "100%"]}
-                        h={["100%", "100%", "1</For>00%", "100%"]}
-                    >
-                        <For each={values.content}>
-                            {(item) => (
-                                <Link
-                                    key={item.name}
-                                    href={item.link}
-                                    target="_blank"
+        <ContentContainer value={values.value}>
+            <Stack alignItems="center" maxW="600px" minH="120px" maxH="120px">
+                {/* <Heading size="2xl">{values.label}</Heading> */}
+                <Text fontSize="lg" fontWeight="medium" textAlign="center">
+                    {values.description}
+                </Text>
+            </Stack>
+            <AnimatedTabContainer>
+                <AnimatedContainer style={{ x: xTranslation }}>
+                    <For each={[...values.content, ...values.content]}>
+                        {(item) => (
+                            <Link
+                                key={item.name}
+                                href={item.link}
+                                target="_blank"
+                            >
+                                <Tooltip
+                                    content={item.name}
+                                    openDelay={100}
+                                    portalled
+                                    showArrow
                                 >
-                                    <GridItem
-                                        w="100%"
-                                        h="100%"
-                                        display="flex"
+                                    <Stack
                                         justifyContent="center"
-                                        alignItems="center"
+                                        align="center"
+                                        maxW="100px"
+                                        gap="10px"
+                                        transition="200ms"
+                                        _hover={{
+                                            transform: "scale(1.1)",
+                                            opacity: 0.6,
+                                        }}
                                     >
-                                        <Stack
-                                            justifyContent="center"
-                                            align="center"
-                                        >
-                                            <img
-                                                src={item.icon}
-                                                alt={item.name}
-                                                style={{ width: "50px" }}
-                                            />
-                                            {item.name}
-                                        </Stack>
-                                    </GridItem>
-                                </Link>
-                            )}
-                        </For>
-                    </Grid>
-                </ContentContainer>
-            </Tabs.Content>
-        </Fragment>
+                                        <Image
+                                            src={item.icon}
+                                            alt={item.name}
+                                            w="50px"
+                                            h="50px"
+                                            maxW="50px"
+                                            maxH="50px"
+                                            objectFit="contain"
+                                            borderRadius={
+                                                isLibraries ? "full" : ""
+                                            }
+                                        />
+                                    </Stack>
+                                </Tooltip>
+                            </Link>
+                        )}
+                    </For>
+                </AnimatedContainer>
+            </AnimatedTabContainer>
+            <Text
+                fontSize="lg"
+                fontWeight="medium"
+                textAlign="center"
+                maxW="600px"
+                mt="20px"
+            >
+                Apasionado por el desarrollo frontend y siempre estoy buscando
+                aprender nuevas tecnologías y mejorar mis habilidades. 🤩
+            </Text>
+        </ContentContainer>
     );
 };
 

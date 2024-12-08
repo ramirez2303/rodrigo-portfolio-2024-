@@ -23,7 +23,7 @@ const NavbarItem = ({ text, link, icon, isVisible }: NavbarItemProps) => {
                         alignItems="center"
                         gap="7px"
                     >
-                        <Icon fontSize="20px" color="chocolate">
+                        <Icon fontSize="20px" color="#f8f0f0">
                             {icon}
                         </Icon>
                         <TextItem
@@ -31,6 +31,7 @@ const NavbarItem = ({ text, link, icon, isVisible }: NavbarItemProps) => {
                             fontWeight="semibold"
                             display={isVisible ? "flex" : "none"}
                             transition="0.3s"
+                            color="#f8f0f0"
                         >
                             {text}
                         </TextItem>

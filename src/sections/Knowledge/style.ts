@@ -1,6 +1,18 @@
 import { Flex, Stack } from "@chakra-ui/react";
 import styled from "styled-components";
 
+export const SectionBg = styled.div`
+    width: 200vw;
+    height: 200vh;
+    position: absolute;
+    top: 100vh;
+    background: radial-gradient(
+        circle,
+        rgba(107, 164, 238, 0.2) 0%,
+        rgba(141, 65, 65, 0.2) 70%
+    );
+`;
+
 export const KnowledgeWrapper = styled(Flex)`
     width: 100%;
     height: 100vh;
@@ -9,12 +21,10 @@ export const KnowledgeWrapper = styled(Flex)`
 `;
 
 export const KnowledgeContainer = styled(Stack)`
-    width: 800px;
+    width: 1000px;
     min-height: 500px;
     height: auto;
-    background: rgba(119, 141, 169, 0.1);
-    border-radius: 0px 6px 6px 6px;
-    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); */
     box-sizing: border-box;
     padding: 40px;
+    margin-top: 20px;
 `;

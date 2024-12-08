@@ -25,7 +25,7 @@ export const TextItem = styled(Text)`
 export const AnimatedBarItem = styled.div`
     width: 0;
     height: 2px;
-    background-color: chocolate;
+    background-color: #8d4141;
     transition: width 300ms ease-in-out;
     position: relative;
     opacity: 0.7;
