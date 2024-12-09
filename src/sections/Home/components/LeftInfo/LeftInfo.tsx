@@ -1,8 +1,30 @@
 import { Button, Flex, Icon, Stack, Text } from "@chakra-ui/react";
 import { VscGithubInverted } from "react-icons/vsc";
 import { FaLinkedin } from "react-icons/fa";
+import { FaCloudDownloadAlt } from "react-icons/fa";
+import { useAnimate } from "motion/react";
+import { IconContainer } from "./style";
 
 const LeftInfo = () => {
+    const [scope, animate] = useAnimate();
+
+    const opacity = { opacity: 1 };
+    const noOpacity = { opacity: 0 };
+    const duration = { duration: 0.1 };
+
+    const onButtonHover = () => {
+        animate([
+            [".animatedCVText", noOpacity, duration],
+            [".animatedCVIcon", opacity, duration],
+        ]);
+    };
+    const onMouseLeave = () => {
+        animate([
+            [".animatedCVIcon", noOpacity, duration],
+            [".animatedCVText", opacity, duration],
+        ]);
+    };
+
     return (
         <Stack gap="0px">
             <Stack gap="0px">
@@ -29,39 +51,72 @@ const LeftInfo = () => {
                 </Text>
             </Stack>
 
-            <Flex
-                gap="20px"
-                mt="10px"
-                justifyContent="flex-start"
-                alignItems="center"
-            >
-                <Button
-                    colorPalette="fg"
-                    variant="outline"
-                    size="lg"
-                    borderRadius="md"
+            <Stack gap="20px" mt="15px" maxW="300px">
+                <Flex
+                    gap="20px"
+                    justifyContent="flex-start"
+                    alignItems="center"
                 >
-                    <Icon fontSize="22px" color="#f2f2f2">
-                        <VscGithubInverted />
-                    </Icon>
-                    <Text fontSize="lg" fontWeight="medium" color="#f2f2f2">
-                        Linkedin
-                    </Text>
-                </Button>
-                <Button
-                    colorPalette="fg"
-                    variant="outline"
-                    size="lg"
-                    borderRadius="md"
-                >
-                    <Icon fontSize="22px" color="#f2f2f2">
-                        <FaLinkedin />
-                    </Icon>
-                    <Text fontSize="lg" fontWeight="medium" color="#f2f2f2">
-                        Github
-                    </Text>
-                </Button>
-            </Flex>
+                    <Button
+                        size="lg"
+                        borderColor="#e1e1e1"
+                        _hover={{ bgColor: "rgba(141, 65, 65, 0.3)" }}
+                        variant="outline"
+                        borderRadius="md"
+                    >
+                        <Icon fontSize="22px" color="#e1e1e1">
+                            <VscGithubInverted />
+                        </Icon>
+                        <Text fontSize="lg" fontWeight="medium" color="#e1e1e1">
+                            Linkedin
+                        </Text>
+                    </Button>
+                    <Button
+                        size="lg"
+                        borderColor="#e1e1e1"
+                        _hover={{ bgColor: "rgba(141, 65, 65, 0.3)" }}
+                        variant="outline"
+                        borderRadius="md"
+                    >
+                        <Icon fontSize="22px" color="#e1e1e1">
+                            <FaLinkedin />
+                        </Icon>
+                        <Text fontSize="lg" fontWeight="medium" color="#e1e1e1">
+                            Github
+                        </Text>
+                    </Button>
+                </Flex>
+                <Flex w="100%" ref={scope}>
+                    <Button
+                        borderColor="#e1e1e1"
+                        _hover={{ bgColor: "rgba(141, 65, 65, 0.3)" }}
+                        variant="outline"
+                        size="lg"
+                        borderRadius="md"
+                        w="100%"
+                        overflow="hidden"
+                        onMouseEnter={onButtonHover}
+                        onMouseLeave={onMouseLeave}
+                    >
+                        <Stack justify="center" alignItems="center" gap="1px">
+                            <Text
+                                className="animatedCVText"
+                                fontSize="lg"
+                                fontWeight="medium"
+                                color="#e1e1e1"
+                            >
+                                Descargar CV
+                            </Text>
+                            <IconContainer
+                                initial={{ opacity: 0 }}
+                                className="animatedCVIcon"
+                            >
+                                <FaCloudDownloadAlt size="xl" />
+                            </IconContainer>
+                        </Stack>
+                    </Button>
+                </Flex>
+            </Stack>
         </Stack>
     );
 };

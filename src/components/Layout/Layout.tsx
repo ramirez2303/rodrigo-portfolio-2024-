@@ -1,8 +1,9 @@
 import { Text } from "@chakra-ui/react";
 import Navbar from "../Navbar";
-import { LayoutContainer, LayoutWrapper } from "./style";
+import { ArrowContainer, LayoutContainer, LayoutWrapper } from "./style";
 import { useEffect, useState } from "react";
 import { AnimatePresence } from "motion/react";
+import { BiSolidUpArrow } from "react-icons/bi";
 
 type LayoutProps = {
     children: React.ReactNode;
@@ -21,6 +22,8 @@ const Layout = ({ children }: LayoutProps) => {
         };
     });
 
+    const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
     return (
         <AnimatePresence>
             <LayoutWrapper>
@@ -30,6 +33,9 @@ const Layout = ({ children }: LayoutProps) => {
 
                 <Navbar isVisible={visible} />
                 <LayoutContainer>{children}</LayoutContainer>
+                <ArrowContainer onClick={scrollToTop}>
+                    <BiSolidUpArrow id="arrowIcon" size="24px" />
+                </ArrowContainer>
             </LayoutWrapper>
         </AnimatePresence>
     );

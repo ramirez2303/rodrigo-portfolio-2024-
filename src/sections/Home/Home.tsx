@@ -7,7 +7,7 @@ import homeBg from "../../assets/home-bg.webp";
 
 const Home = () => {
     return (
-        <HomeContainer>
+        <HomeContainer id="home">
             <HomeBg
                 bgImage={`url(${homeBg})`}
                 bgSize="cover"

@@ -40,29 +40,29 @@ export const ProjectsGridContainer = styled(Box)`
 
     .card[data-grid="img-2"] {
         grid-area: img-2;
-        &:hover {
+        /* &:hover {
             margin-bottom: 10px;
-        }
+        } */
     }
 
     .card[data-grid="img-3"] {
         grid-area: img-3;
-        &:hover {
+        /* &:hover {
             margin-bottom: 10px;
-        }
+        } */
     }
 
     .card[data-grid="img-4"] {
         grid-area: img-4;
-        &:hover {
+        /* &:hover {
             margin-bottom: 10px;
-        }
+        } */
     }
 
     .card[data-grid="img-5"] {
         grid-area: img-5;
-        &:hover {
+        /* &:hover {
             margin-bottom: 10px;
-        }
+        } */
     }
 `;

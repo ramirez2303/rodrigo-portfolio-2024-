@@ -10,3 +10,10 @@ export type tabType = {
     content: ContentType[];
     description: string;
 };
+
+export type projectType = {
+    image: string;
+    title: string;
+    description: string;
+    tools: string[];
+};

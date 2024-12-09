@@ -167,7 +167,7 @@ const Knowledge = () => {
     return (
         <Fragment>
             <SectionBg />
-            <KnowledgeWrapper>
+            <KnowledgeWrapper id="knowledge">
                 <Tabs.Root
                     defaultValue="technologies"
                     variant="line"

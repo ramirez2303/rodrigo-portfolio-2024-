@@ -9,9 +9,9 @@ type NavbarProps = {
 
 const Navbar = ({ isVisible }: NavbarProps) => {
     const navbarItems = [
-        { text: "Inicio", link: "#", icon: <HiOutlineHome /> },
-        { text: "Conocimientos", link: "#about", icon: <BsBook /> },
-        { text: "Proyectos", link: "#about", icon: <BsGlobeAmericas /> },
+        { text: "Inicio", link: "#home", icon: <HiOutlineHome /> },
+        { text: "Conocimientos", link: "#knowledge", icon: <BsBook /> },
+        { text: "Proyectos", link: "#projects", icon: <BsGlobeAmericas /> },
         { text: "Experiencia", link: "#about", icon: <BsHammer /> },
         { text: "Contacto", link: "#contact", icon: <BsMailbox /> },
     ];
