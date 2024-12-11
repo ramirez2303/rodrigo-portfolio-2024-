@@ -4,8 +4,13 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaCloudDownloadAlt } from "react-icons/fa";
 import { useAnimate } from "motion/react";
 import { IconContainer } from "./style";
+import { FaPaperclip } from "react-icons/fa6";
+import { FaCopy } from "react-icons/fa";
+import { useState } from "react";
+import { Tooltip } from "@/components/ui/tooltip";
 
 const LeftInfo = () => {
+    const [isCopied, setIsCopied] = useState(false);
     const [scope, animate] = useAnimate();
 
     const opacity = { opacity: 1 };
@@ -23,6 +28,15 @@ const LeftInfo = () => {
             [".animatedCVIcon", noOpacity, duration],
             [".animatedCVText", opacity, duration],
         ]);
+    };
+
+    const handleCopy = () => {
+        if (isCopied) return;
+        setIsCopied(true);
+        navigator.clipboard.writeText("exeramirez23@gmail.com");
+        setTimeout(() => {
+            setIsCopied(false);
+        }, 3000);
     };
 
     return (
@@ -51,7 +65,7 @@ const LeftInfo = () => {
                 </Text>
             </Stack>
 
-            <Stack gap="20px" mt="15px" maxW="300px">
+            <Stack gap="20px" mt="15px" maxW="320px">
                 <Flex
                     gap="20px"
                     justifyContent="flex-start"
@@ -85,6 +99,57 @@ const LeftInfo = () => {
                             Github
                         </Text>
                     </Button>
+                </Flex>
+                <Flex>
+                    <Flex
+                        justifyContent="flex-start"
+                        alignItems="center"
+                        border="1px solid #e1e1e1"
+                        borderRadius="md"
+                        boxSizing="border-box"
+                        padding="6px 10px"
+                        mr={4}
+                    >
+                        <Text
+                            fontSize="lg"
+                            fontWeight="medium"
+                            color="#e1e1e1"
+                            _selection={{ bgColor: "rgba(242, 242, 242, 0.3)" }}
+                        >
+                            exeramirez23@gmail.com
+                        </Text>
+                    </Flex>
+
+                    <Tooltip
+                        content="Copiar"
+                        openDelay={0}
+                        closeDelay={0}
+                        showArrow
+                    >
+                        <Button
+                            size="lg"
+                            borderColor="#e1e1e1"
+                            _hover={{ bgColor: "rgba(141, 65, 65, 0.3)" }}
+                            variant="outline"
+                            borderRadius="md"
+                            onClick={handleCopy}
+                        >
+                            <Tooltip
+                                content="Copiado!"
+                                openDelay={0}
+                                closeDelay={0}
+                                open={isCopied}
+                                showArrow
+                            >
+                                <Icon fontSize="22px" color="#e1e1e1">
+                                    {isCopied ? <FaPaperclip /> : <FaCopy />}
+                                </Icon>
+                            </Tooltip>
+                            {/* <Text fontSize="lg" fontWeight="medium" color="#e1e1e1">
+                            Email
+                        </Text> */}
+                        </Button>
+                    </Tooltip>
                 </Flex>
                 <Flex w="100%" ref={scope}>
                     <Button

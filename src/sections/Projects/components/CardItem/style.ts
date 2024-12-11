@@ -9,6 +9,7 @@ export const CardItemContainer = styled(Flex)<{ isSelected: boolean }>`
     max-height: 144px;
     position: relative;
     background: rgba(119, 141, 169, 0.5);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 22px 70px 4px;
     border-radius: 8px;
 
     box-sizing: border-box;
@@ -21,15 +22,15 @@ export const CardItemContainer = styled(Flex)<{ isSelected: boolean }>`
         !isSelected
             ? `
         left: 0;
-        padding: 8px;
-      
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 22px 70px 4px;
+        border: 2px solid rgba(255, 255, 255, 0.5);
         &:hover {
           background: rgba(119, 141, 169, 0.8);
           left: 10px;
         }
 
         &:active {
-          background: rgba(119, 141, 169, 1);
+        background: rgba(119, 141, 169, 1);
           box-shadow: rgba(0, 0, 0, 0.4) 0px 22px 70px 4px;
           left: 20px;
         }`
@@ -41,7 +42,7 @@ export const CardItemContainer = styled(Flex)<{ isSelected: boolean }>`
             justify-content: flex-start;
             align-items: flex-start;
             gap: 0px;
-            padding: 16px;
+            // padding: 16px;
             `}
 `;
 
@@ -51,9 +52,10 @@ export const CardImage = styled.div<{ image: string; isSelected: boolean }>`
     min-height: 128px;
     max-height: 400px;
     z-index: 1;
-    padding: 10px;
     box-sizing: border-box;
-    border-radius: 6px;
+    /* padding: 10px; */
+    border-radius: ${({ isSelected }) =>
+        isSelected ? "6px 6px 0px 0px" : "6px"};
     transition: 200ms ease-in-out;
 
     background-image: url(${({ image }) => image});

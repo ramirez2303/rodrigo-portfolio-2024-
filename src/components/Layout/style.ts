@@ -20,8 +20,9 @@ export const LayoutContainer = styled(Flex)`
     position: relative;
 `;
 
-export const ArrowContainer = styled(motion.div)`
+export const ArrowContainer = styled(motion.div)<{ visible: boolean }>`
     display: flex;
+    opacity: ${({ visible }) => (!visible ? "1" : "0")};
 
     position: fixed;
     bottom: 20px;
@@ -33,7 +34,8 @@ export const ArrowContainer = styled(motion.div)`
     border: 1px solid rgba(225, 225, 225, 0.5);
     border-radius: 50%;
 
-    transition: 200ms;
+    transition: background-color 200ms ease-in-out, border 200ms ease-in-out,
+        opacity 300ms;
     cursor: pointer;
 
     &:hover {

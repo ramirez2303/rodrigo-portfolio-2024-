@@ -33,7 +33,7 @@ const Layout = ({ children }: LayoutProps) => {
 
                 <Navbar isVisible={visible} />
                 <LayoutContainer>{children}</LayoutContainer>
-                <ArrowContainer onClick={scrollToTop}>
+                <ArrowContainer onClick={scrollToTop} visible={visible}>
                     <BiSolidUpArrow id="arrowIcon" size="24px" />
                 </ArrowContainer>
             </LayoutWrapper>
