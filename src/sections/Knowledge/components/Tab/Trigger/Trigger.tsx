@@ -1,5 +1,5 @@
 import { Tabs } from "@chakra-ui/react";
-import React, { Fragment } from "react";
+import { Fragment } from "react";
 
 type TriggerProps = {
     values: { value: string; label: string };
