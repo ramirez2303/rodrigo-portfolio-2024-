@@ -9,7 +9,7 @@ export const HomeContainer = styled(motion.div)`
     justify-content: center;
     align-items: center;
     gap: 50px;
-    background-color: rgba(141, 65, 65, 0.3);
+    background-color: rgba(141, 65, 65, 0.25);
 
     &::before {
         content: "";
@@ -21,12 +21,13 @@ export const HomeContainer = styled(motion.div)`
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        opacity: 0.1;
+        filter: blur(2px);
+        opacity: 0.07;
     }
 `;
 
 export const AnimatedContainer = styled(motion.div)`
-    max-width: 1000px;
+    max-width: 800px;
     width: 100%;
     display: flex;
     flex-direction: column;

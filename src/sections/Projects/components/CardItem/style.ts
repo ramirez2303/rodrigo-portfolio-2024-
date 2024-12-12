@@ -23,16 +23,16 @@ export const CardItemContainer = styled(Flex)<{ isSelected: boolean }>`
             ? `
         left: 0;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 22px 70px 4px;
-        border: 2px solid rgba(255, 255, 255, 0.5);
+        border: 2px solid rgba(255, 255, 255, 0.3);
         &:hover {
-          background: rgba(119, 141, 169, 0.8);
-          left: 10px;
+            background: rgba(119, 141, 169, 0.8);
+            left: 10px;
         }
 
         &:active {
         background: rgba(119, 141, 169, 1);
-          box-shadow: rgba(0, 0, 0, 0.4) 0px 22px 70px 4px;
-          left: 20px;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 22px 70px 4px;
+            left: 20px;
         }`
             : `
             max-width: 100%;
@@ -65,20 +65,11 @@ export const CardImage = styled.div<{ image: string; isSelected: boolean }>`
     position: relative;
 
     ${({ isSelected }) =>
-        isSelected
-            ? `
-        // position: relative;
-        // top: 0;
-        // left: 0;
+        isSelected &&
+        `
         &:hover {
             opacity: 0.6;
-            // filter: blur(1px);
         }
-        `
-            : `
-        // position: absolute;
-        // top: 0;
-        // left: 0;
         `}
 `;
 

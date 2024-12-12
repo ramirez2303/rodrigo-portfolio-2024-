@@ -78,9 +78,10 @@ const CardItem = ({
                                         key={ix}
                                         size="lg"
                                         colorPalette="red"
-                                        bgColor="rgba(141, 65, 65, 0.3)"
+                                        bgColor="transparent"
                                         color="#f2f2f2"
                                         padding="4px 12px"
+                                        fontWeight="bold"
                                     >
                                         {item}
                                     </Tag>

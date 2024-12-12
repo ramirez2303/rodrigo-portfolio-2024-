@@ -21,7 +21,7 @@ export const KnowledgeWrapper = styled(Flex)`
 `;
 
 export const KnowledgeContainer = styled(Stack)`
-    width: 1000px;
+    width: 800px;
     min-height: 500px;
     height: auto;
     box-sizing: border-box;

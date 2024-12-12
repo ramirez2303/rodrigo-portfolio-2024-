@@ -10,12 +10,11 @@ import styledComponentsIcon from "/src/assets/styled-components.png";
 import reactQueryIcon from "/src/assets/react-query.png";
 import storybookIcon from "/src/assets/storybook.png";
 import jiraIcon from "/src/assets/jira.png";
-import postmanIcon from "/src/assets/postman.svg";
 import { tabType } from "@/utils/types";
 import { motion } from "motion/react";
 import { useState } from "react";
 
-const Knowledge = () => {
+const AboutMe = () => {
     const [restartAnimation, setRestartAnimation] = useState(true);
     const toggleAnimation = () => {
         setRestartAnimation(false);
@@ -49,11 +48,6 @@ const Knowledge = () => {
             name: "TypeScript",
             icon: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
             link: "https://www.typescriptlang.org/",
-        },
-        {
-            name: "Node.js",
-            icon: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
-            link: "https://nodejs.org/",
         },
     ];
 
@@ -116,20 +110,22 @@ const Knowledge = () => {
             icon: jiraIcon,
             link: "https://www.atlassian.com/software/jira",
         },
-        {
-            name: "Postman",
-            icon: postmanIcon,
-            link: "https://www.postman.com/",
-        },
     ];
 
     const tabs: tabType[] = [
+        {
+            value: "aboutMe",
+            label: "Sobre Mi",
+            content: undefined,
+            description:
+                "Hola! Soy Rodrigo, de Balcarce, Prov. de Buenos Aires, Argentina. Empece en el mundo de la programación de forma autodidacta, con una notebook prestada :) y poniendole muchas ganas. Lo primero que hice fueron cursos de Udemy que encontre gratis sobre HTML, CSS y Javascript, desde ese momento no pare y no pienso parar.",
+        },
         {
             value: "technologies",
             label: "Tecnologias",
             content: technologiesContent,
             description:
-                "Soy un desarrollador frontend con experiencia en React y TypeScript. Apasionado en la creación de interfaces de usuario atractivas y funcionales con la capacidad de traducir requisitos de diseño en código limpio y eficiente.",
+                "He usado, tanto para proyectos personales para aprender como dentro de mi experiencia laboral React, TypeScript, Javascript, CSS y HTML. Creando interfaces de usuario atractivas y funcionales con la capacidad de traducir requisitos buscando un codigo limpio y eficiente.",
         },
         {
             value: "libraries",
@@ -167,9 +163,9 @@ const Knowledge = () => {
     return (
         <Fragment>
             <SectionBg />
-            <KnowledgeWrapper id="knowledge">
+            <KnowledgeWrapper id="aboutMe">
                 <Tabs.Root
-                    defaultValue="technologies"
+                    defaultValue="aboutMe"
                     variant="line"
                     onValueChange={() => toggleAnimation()}
                 >
@@ -200,4 +196,4 @@ const Knowledge = () => {
     );
 };
 
-export default Knowledge;
+export default AboutMe;

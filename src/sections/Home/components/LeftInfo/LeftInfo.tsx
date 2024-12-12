@@ -1,12 +1,13 @@
-import { Button, Flex, Icon, Stack, Text } from "@chakra-ui/react";
+import { Button, Flex, Icon, Link, Stack, Text } from "@chakra-ui/react";
 import { VscGithubInverted } from "react-icons/vsc";
 import { FaLinkedin } from "react-icons/fa";
 import { FaCloudDownloadAlt } from "react-icons/fa";
 import { useAnimate } from "motion/react";
 import { IconContainer } from "./style";
+import { useState } from "react";
+import curriculum from "/src/assets/cv/rodrigoRamirezCV.pdf";
 import { FaPaperclip } from "react-icons/fa6";
 import { FaCopy } from "react-icons/fa";
-import { useState } from "react";
 import { Tooltip } from "@/components/ui/tooltip";
 
 const LeftInfo = () => {
@@ -46,7 +47,7 @@ const LeftInfo = () => {
                     Rodrigo Exequiel Ramirez
                 </Text>
                 <Text
-                    fontSize="xl"
+                    fontSize="2xl"
                     fontWeight="semibold"
                     opacity={0.9}
                     mt="-7px"
@@ -54,53 +55,57 @@ const LeftInfo = () => {
                     Desarrollador Frontend
                 </Text>
             </Stack>
-            <Stack gap="0px" mt="5px">
-                <Text
-                    fontSize="xl"
-                    fontWeight="semibold"
-                    opacity={0.9}
-                    mt="-5px"
-                >
-                    Balcarce, Buenos Aires, Argentina
-                </Text>
-            </Stack>
-
-            <Stack gap="20px" mt="15px" maxW="320px">
+            <Stack gap="10px" mt="15px" maxW="300px">
                 <Flex
                     gap="20px"
                     justifyContent="flex-start"
                     alignItems="center"
                 >
-                    <Button
-                        size="lg"
-                        borderColor="#e1e1e1"
-                        _hover={{ bgColor: "rgba(141, 65, 65, 0.3)" }}
-                        variant="outline"
-                        borderRadius="md"
+                    <Link
+                        href="https://www.linkedin.com/in/rodrigo-ramirez-b643b9215/"
+                        target="_blank"
                     >
-                        <Icon fontSize="22px" color="#e1e1e1">
-                            <VscGithubInverted />
-                        </Icon>
-                        <Text fontSize="lg" fontWeight="medium" color="#e1e1e1">
-                            Linkedin
-                        </Text>
-                    </Button>
-                    <Button
-                        size="lg"
-                        borderColor="#e1e1e1"
-                        _hover={{ bgColor: "rgba(141, 65, 65, 0.3)" }}
-                        variant="outline"
-                        borderRadius="md"
-                    >
-                        <Icon fontSize="22px" color="#e1e1e1">
-                            <FaLinkedin />
-                        </Icon>
-                        <Text fontSize="lg" fontWeight="medium" color="#e1e1e1">
-                            Github
-                        </Text>
-                    </Button>
+                        <Button
+                            size="lg"
+                            borderColor="#e1e1e1"
+                            _hover={{ bgColor: "rgba(141, 65, 65, 0.3)" }}
+                            variant="outline"
+                            borderRadius="md"
+                        >
+                            <Icon fontSize="22px" color="#e1e1e1">
+                                <FaLinkedin />
+                            </Icon>
+                            <Text
+                                fontSize="lg"
+                                fontWeight="medium"
+                                color="#e1e1e1"
+                            >
+                                Linkedin
+                            </Text>
+                        </Button>
+                    </Link>
+                    <Link href="https://github.com/ramirez2303" target="_blank">
+                        <Button
+                            size="lg"
+                            borderColor="#e1e1e1"
+                            _hover={{ bgColor: "rgba(141, 65, 65, 0.3)" }}
+                            variant="outline"
+                            borderRadius="md"
+                        >
+                            <Icon fontSize="22px" color="#e1e1e1">
+                                <VscGithubInverted />
+                            </Icon>
+                            <Text
+                                fontSize="lg"
+                                fontWeight="medium"
+                                color="#e1e1e1"
+                            >
+                                Github
+                            </Text>
+                        </Button>
+                    </Link>
                 </Flex>
-                <Flex>
+                {/* <Flex>
                     <Flex
                         justifyContent="flex-start"
                         alignItems="center"
@@ -145,41 +150,49 @@ const LeftInfo = () => {
                                     {isCopied ? <FaPaperclip /> : <FaCopy />}
                                 </Icon>
                             </Tooltip>
-                            {/* <Text fontSize="lg" fontWeight="medium" color="#e1e1e1">
-                            Email
-                        </Text> */}
                         </Button>
                     </Tooltip>
-                </Flex>
+                </Flex> */}
                 <Flex w="100%" ref={scope}>
-                    <Button
-                        borderColor="#e1e1e1"
-                        _hover={{ bgColor: "rgba(141, 65, 65, 0.3)" }}
-                        variant="outline"
-                        size="lg"
-                        borderRadius="md"
+                    <Link
                         w="100%"
-                        overflow="hidden"
-                        onMouseEnter={onButtonHover}
-                        onMouseLeave={onMouseLeave}
+                        href={curriculum}
+                        download="Rodrigo Ramirez CV"
+                        target="_blank"
                     >
-                        <Stack justify="center" alignItems="center" gap="1px">
-                            <Text
-                                className="animatedCVText"
-                                fontSize="lg"
-                                fontWeight="medium"
-                                color="#e1e1e1"
+                        <Button
+                            borderColor="#e1e1e1"
+                            _hover={{ bgColor: "rgba(141, 65, 65, 0.3)" }}
+                            variant="outline"
+                            size="lg"
+                            borderRadius="md"
+                            w="100%"
+                            overflow="hidden"
+                            onMouseEnter={onButtonHover}
+                            onMouseLeave={onMouseLeave}
+                        >
+                            <Stack
+                                justify="center"
+                                alignItems="center"
+                                gap="1px"
                             >
-                                Descargar CV
-                            </Text>
-                            <IconContainer
-                                initial={{ opacity: 0 }}
-                                className="animatedCVIcon"
-                            >
-                                <FaCloudDownloadAlt size="xl" />
-                            </IconContainer>
-                        </Stack>
-                    </Button>
+                                <Text
+                                    className="animatedCVText"
+                                    fontSize="lg"
+                                    fontWeight="medium"
+                                    color="#e1e1e1"
+                                >
+                                    Descargar CV
+                                </Text>
+                                <IconContainer
+                                    initial={{ opacity: 0 }}
+                                    className="animatedCVIcon"
+                                >
+                                    <FaCloudDownloadAlt size="xl" />
+                                </IconContainer>
+                            </Stack>
+                        </Button>
+                    </Link>
                 </Flex>
             </Stack>
         </Stack>

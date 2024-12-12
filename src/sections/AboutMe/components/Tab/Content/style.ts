@@ -7,11 +7,11 @@ export const ContentContainer = styled(Tabs.Content)`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 50px;
 `;
 
 export const AnimatedTabContainer = styled(Flex)`
-    max-width: 600px;
+    max-width: 500px;
     min-height: 100px;
     max-height: 100px;
     overflow: hidden;

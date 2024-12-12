@@ -10,7 +10,7 @@ export const NavbarItemContainer = styled(Flex)`
     box-sizing: border-box;
 
     &:hover {
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
 
     &:active {

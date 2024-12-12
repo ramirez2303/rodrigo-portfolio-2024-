@@ -5,9 +5,9 @@ export type ContentType = {
 };
 
 export type tabType = {
-    value: "technologies" | "libraries" | "tools";
+    value: "aboutMe" | "technologies" | "libraries" | "tools";
     label: string;
-    content: ContentType[];
+    content?: ContentType[];
     description: string;
 };
 
