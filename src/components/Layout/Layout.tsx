@@ -1,4 +1,4 @@
-import { Text } from "@chakra-ui/react";
+// import { Text } from "@chakra-ui/react";
 import Navbar from "../Navbar";
 import { ArrowContainer, LayoutContainer, LayoutWrapper } from "./style";
 import { useEffect, useState } from "react";
