@@ -16,4 +16,8 @@ export type projectType = {
     title: string;
     description: string;
     tools: string[];
+    links: {
+        project: string;
+        github: string;
+    };
 };

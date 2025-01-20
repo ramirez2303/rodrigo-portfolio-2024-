@@ -10,6 +10,7 @@ export const CardItemContainer = styled(Flex)<{ isSelected: boolean }>`
     position: relative;
     background: rgba(119, 141, 169, 0.5);
     box-shadow: rgba(0, 0, 0, 0.4) 0px 22px 70px 4px;
+    cursor: pointer;
     border-radius: 8px;
 
     box-sizing: border-box;
@@ -42,7 +43,6 @@ export const CardItemContainer = styled(Flex)<{ isSelected: boolean }>`
             justify-content: flex-start;
             align-items: flex-start;
             gap: 0px;
-            // padding: 16px;
             `}
 `;
 
@@ -87,16 +87,21 @@ export const ExternalIconContainer = styled.div`
     cursor: pointer;
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.5);
+    gap: 60px;
 
-    & > svg {
+    & > a {
         transition: 200ms ease-in-out;
     }
 
     ${CardImage}:hover & {
         opacity: 1;
 
-        svg {
+        a {
             transform: scale(2);
+
+            &:hover {
+                transform: scale(2.5);
+            }
         }
     }
 `;

@@ -12,25 +12,26 @@ type LayoutProps = {
 const Layout = ({ children }: LayoutProps) => {
     const [visible, setVisible] = useState(true);
 
+    const handleScroll = () => {
+        setVisible(window.scrollY < 800);
+    };
+
     useEffect(() => {
-        const handleScroll = () => {
-            setVisible(window.scrollY < 800);
-        };
+        handleScroll();
         window.addEventListener("scroll", handleScroll);
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    });
+    }, []);
 
     const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
     return (
         <AnimatePresence>
             <LayoutWrapper>
-                <Text position="fixed" bottom="10px" left="10px" zIndex={1}>
+                {/* <Text position="fixed" bottom="10px" left="10px" zIndex={1}>
                     #ColapintoToF1In2025
-                </Text>
-
+                </Text> */}
                 <Navbar isVisible={visible} />
                 <LayoutContainer>{children}</LayoutContainer>
                 <ArrowContainer onClick={scrollToTop} visible={visible}>

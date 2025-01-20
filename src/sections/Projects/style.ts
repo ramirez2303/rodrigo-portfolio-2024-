@@ -1,11 +1,14 @@
-import { Box, Stack } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import styled from "styled-components";
 
-export const ProjectsWrapper = styled(Stack)`
+export const ProjectsWrapper = styled.section`
     width: 100%;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
     position: relative;
 `;
 

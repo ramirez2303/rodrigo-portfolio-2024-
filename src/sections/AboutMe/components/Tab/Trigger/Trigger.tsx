@@ -11,8 +11,8 @@ const Trigger = ({ values }: TriggerProps) => {
             <Tabs.Trigger
                 value={values.value}
                 color="#f8f0f0"
-                fontSize="lg"
-                fontWeight="semibold"
+                fontSize="xl"
+                fontWeight="bold"
             >
                 {values.label}
             </Tabs.Trigger>

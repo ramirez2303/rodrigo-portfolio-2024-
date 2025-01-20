@@ -1,7 +1,7 @@
 import { Flex } from "@chakra-ui/react";
 import LeftInfo from "./components/LeftInfo";
 import RightInfo from "./components/RightInfo";
-import { AnimatedContainer, HomeContainer } from "./style.ts";
+import { AnimatedContainer, HomeContainer } from "./style";
 
 const Home = () => {
     return (
@@ -15,6 +15,7 @@ const Home = () => {
                     width="100%"
                     justifyContent="space-between"
                     alignItems="center"
+                    mt="-100px"
                 >
                     <LeftInfo />
                     <RightInfo />

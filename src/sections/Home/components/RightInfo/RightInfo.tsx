@@ -3,12 +3,7 @@ import rodrigoIMG from "../../../../assets/rodrigoIMG.png";
 
 const RightInfo = () => {
     return (
-        <Stack
-            position="relative"
-            justifyContent="center"
-            alignItems="center"
-            mt="-75px"
-        >
+        <Stack position="relative" justifyContent="center" alignItems="center">
             <Image
                 src={rodrigoIMG}
                 w="300px"

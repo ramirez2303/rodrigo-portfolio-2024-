@@ -12,7 +12,7 @@ const Navbar = ({ isVisible }: NavbarProps) => {
         { text: "Inicio", link: "#home", icon: <HiOutlineHome /> },
         { text: "Sobre Mi", link: "#aboutMe", icon: <BsBook /> },
         { text: "Proyectos", link: "#projects", icon: <BsGlobeAmericas /> },
-        { text: "Experiencia", link: "#about", icon: <BsHammer /> },
+        { text: "Experiencia", link: "#experience", icon: <BsHammer /> },
         { text: "Contacto", link: "#contact", icon: <BsMailbox /> },
     ];
 

@@ -1,4 +1,4 @@
-import { Flex, Stack } from "@chakra-ui/react";
+import { Stack } from "@chakra-ui/react";
 import styled from "styled-components";
 
 export const SectionBg = styled.div`
@@ -13,9 +13,10 @@ export const SectionBg = styled.div`
     );
 `;
 
-export const KnowledgeWrapper = styled(Flex)`
+export const KnowledgeWrapper = styled.section`
     width: 100%;
     height: 100vh;
+    display: flex;
     justify-content: center;
     align-items: center;
 `;
@@ -25,6 +26,6 @@ export const KnowledgeContainer = styled(Stack)`
     min-height: 500px;
     height: auto;
     box-sizing: border-box;
-    padding: 40px;
+    padding: 20px 0px 40px;
     margin-top: 20px;
 `;

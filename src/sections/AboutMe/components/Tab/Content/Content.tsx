@@ -34,7 +34,12 @@ const Content = ({ values }: ContentProps) => {
     return (
         <ContentContainer value={values.value}>
             <Stack alignItems="center" maxW="800px" minH="120px" maxH="120px">
-                <Text fontSize="lg" fontWeight="medium" textAlign="center">
+                <Text
+                    fontSize="lg"
+                    fontWeight="medium"
+                    textAlign="left"
+                    opacity={0.9}
+                >
                     {values.description}
                 </Text>
             </Stack>
@@ -104,7 +109,7 @@ const Content = ({ values }: ContentProps) => {
                         fontWeight="medium"
                         textAlign="center"
                         maxW="800px"
-                        mt="-20px"
+                        opacity={0.9}
                     >
                         Apasionado por el desarrollo frontend y siempre estoy
                         buscando aprender nuevas tecnologías y mejorar mis

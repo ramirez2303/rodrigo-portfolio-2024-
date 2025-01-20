@@ -1,17 +1,22 @@
-import { Button, Flex, Icon, Link, Stack, Text } from "@chakra-ui/react";
+import {
+    Button,
+    Flex,
+    Heading,
+    Icon,
+    Link,
+    Stack,
+    Text,
+} from "@chakra-ui/react";
 import { VscGithubInverted } from "react-icons/vsc";
 import { FaLinkedin } from "react-icons/fa";
 import { FaCloudDownloadAlt } from "react-icons/fa";
 import { useAnimate } from "motion/react";
 import { IconContainer } from "./style";
-import { useState } from "react";
+// import { useState } from "react";
 import curriculum from "/src/assets/cv/rodrigoRamirezCV.pdf";
-import { FaPaperclip } from "react-icons/fa6";
-import { FaCopy } from "react-icons/fa";
-import { Tooltip } from "@/components/ui/tooltip";
 
 const LeftInfo = () => {
-    const [isCopied, setIsCopied] = useState(false);
+    // const [isCopied, setIsCopied] = useState(false);
     const [scope, animate] = useAnimate();
 
     const opacity = { opacity: 1 };
@@ -31,31 +36,32 @@ const LeftInfo = () => {
         ]);
     };
 
-    const handleCopy = () => {
-        if (isCopied) return;
-        setIsCopied(true);
-        navigator.clipboard.writeText("exeramirez23@gmail.com");
-        setTimeout(() => {
-            setIsCopied(false);
-        }, 3000);
-    };
+    // const handleCopy = () => {
+    //     if (isCopied) return;
+    //     setIsCopied(true);
+    //     navigator.clipboard.writeText("exeramirez23@gmail.com");
+    //     setTimeout(() => {
+    //         setIsCopied(false);
+    //     }, 3000);
+    // };
 
     return (
         <Stack gap="0px">
             <Stack gap="0px">
-                <Text fontSize="3xl" fontWeight="bold" mb="5px">
+                <Heading as="h1" fontSize="3xl" fontWeight="bold" mb="15px">
                     Rodrigo Exequiel Ramirez
-                </Text>
-                <Text
+                </Heading>
+                <Heading
+                    as="h3"
                     fontSize="2xl"
                     fontWeight="semibold"
-                    opacity={0.9}
+                    opacity={0.8}
                     mt="-7px"
                 >
                     Desarrollador Frontend
-                </Text>
+                </Heading>
             </Stack>
-            <Stack gap="10px" mt="15px" maxW="300px">
+            <Stack gap="10px" mt="15px" maxW="260px">
                 <Flex
                     gap="20px"
                     justifyContent="flex-start"
@@ -66,7 +72,7 @@ const LeftInfo = () => {
                         target="_blank"
                     >
                         <Button
-                            size="lg"
+                            size="md"
                             borderColor="#e1e1e1"
                             _hover={{ bgColor: "rgba(141, 65, 65, 0.3)" }}
                             variant="outline"
@@ -76,7 +82,7 @@ const LeftInfo = () => {
                                 <FaLinkedin />
                             </Icon>
                             <Text
-                                fontSize="lg"
+                                fontSize="md"
                                 fontWeight="medium"
                                 color="#e1e1e1"
                             >
@@ -86,7 +92,7 @@ const LeftInfo = () => {
                     </Link>
                     <Link href="https://github.com/ramirez2303" target="_blank">
                         <Button
-                            size="lg"
+                            size="md"
                             borderColor="#e1e1e1"
                             _hover={{ bgColor: "rgba(141, 65, 65, 0.3)" }}
                             variant="outline"
@@ -96,7 +102,7 @@ const LeftInfo = () => {
                                 <VscGithubInverted />
                             </Icon>
                             <Text
-                                fontSize="lg"
+                                fontSize="md"
                                 fontWeight="medium"
                                 color="#e1e1e1"
                             >
@@ -164,7 +170,7 @@ const LeftInfo = () => {
                             borderColor="#e1e1e1"
                             _hover={{ bgColor: "rgba(141, 65, 65, 0.3)" }}
                             variant="outline"
-                            size="lg"
+                            size="md"
                             borderRadius="md"
                             w="100%"
                             overflow="hidden"
@@ -178,7 +184,7 @@ const LeftInfo = () => {
                             >
                                 <Text
                                     className="animatedCVText"
-                                    fontSize="lg"
+                                    fontSize="md"
                                     fontWeight="medium"
                                     color="#e1e1e1"
                                 >

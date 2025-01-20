@@ -2,6 +2,7 @@ import Layout from "./components/Layout";
 import Home from "./sections/Home";
 import AboutMe from "./sections/AboutMe";
 import Projects from "./sections/Projects";
+import Experience from "./sections/Experience";
 
 function App() {
     return (
@@ -9,6 +10,7 @@ function App() {
             <Home />
             <AboutMe />
             <Projects />
+            <Experience />
         </Layout>
     );
 }

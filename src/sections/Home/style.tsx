@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import styled from "styled-components";
 import homeBg from "../../assets/home-bg.webp";
 
-export const HomeContainer = styled(motion.div)`
+export const HomeContainer = styled(motion.section)`
     width: 100vw;
     height: 100vh;
     display: flex;

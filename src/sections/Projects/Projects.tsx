@@ -16,6 +16,10 @@ const Projects = () => {
             description:
                 "Una pagina de un producto de una fake e-commerce, con un carrusel y un carrito funcional, basada en el reto de la pagina Frontend Mentor",
             tools: ["React", "Javascript", "ChakraUI"],
+            links: {
+                project: "https://fake-e-commerce-product-page.vercel.app/",
+                github: "https://github.com/ramirez2303/fake-e-commerce-product-page",
+            },
         },
         {
             image: ecommerce,
@@ -23,6 +27,11 @@ const Projects = () => {
             description:
                 "Esta es una fake e-commerce de zapatillas, es solo diseño no es funcional",
             tools: ["HTML", "Javascript", "CSS"],
+            links: {
+                project:
+                    "https://ramirez2303.github.io/E-commerce-Design-Practice/",
+                github: "https://github.com/ramirez2303/E-commerce-Design-Practice",
+            },
         },
         {
             image: advice,
@@ -30,6 +39,11 @@ const Projects = () => {
             description:
                 "Esta es una fake e-commerce de zapatillas, es solo diseño no es funcional",
             tools: ["React", "Javascript", "ChakraUI"],
+            links: {
+                project:
+                    "https://advice-generator-frontendmentor-challenge.vercel.app/",
+                github: "https://github.com/ramirez2303/advice-generator-frontendmentor-challenge",
+            },
         },
         {
             image: order,
@@ -37,6 +51,11 @@ const Projects = () => {
             description:
                 "Esta es una pagina con un generador de consejos, conectado a una API proporcionada por Frontend Mentor, basada en el reto de esta misma pagina",
             tools: ["HTML", "CSS"],
+            links: {
+                project:
+                    "https://ramirez2303.github.io/Order-Cummary-Component-Challenge/",
+                github: "https://github.com/ramirez2303/Order-Cummary-Component-Challenge",
+            },
         },
         {
             image: "",
@@ -44,10 +63,15 @@ const Projects = () => {
             description:
                 "Esta es una fake e-commerce de zapatillas, es solo diseño no es funcional",
             tools: ["React", "TypeScript", "Styled-components"],
+            links: {
+                project:
+                    "https://ramirez2303.github.io/Order-Cummary-Component-Challenge/",
+                github: "https://github.com/ramirez2303/Order-Cummary-Component-Challenge",
+            },
         },
     ];
     return (
-        <ProjectsWrapper id="projects" gap={20}>
+        <ProjectsWrapper id="projects">
             <ProjectsGridContainer>
                 <For each={projects}>
                     {(project, ix) => (

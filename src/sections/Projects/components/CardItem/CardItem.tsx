@@ -25,11 +25,7 @@ const CardItem = ({
             className={className}
             data-grid={dataGrid}
             isSelected={isSelected}
-            onClick={(e) =>
-                isSelected
-                    ? console.log("holaa")
-                    : onClick(e.target as HTMLDivElement)
-            }
+            onClick={(e) => !isSelected && onClick(e.target as HTMLDivElement)}
         >
             <Stack
                 w="100%"
@@ -39,7 +35,11 @@ const CardItem = ({
                 pointerEvents={isSelected ? "auto" : "none"}
                 margin="auto"
             >
-                <ProjectImage image={project.image} isSelected={isSelected} />
+                <ProjectImage
+                    image={project.image}
+                    links={project.links}
+                    isSelected={isSelected}
+                />
                 <motion.div
                     initial={{ display: "none", opacity: 0 }}
                     animate={{
@@ -56,13 +56,13 @@ const CardItem = ({
                         justifyContent="center"
                         alignItems="center"
                         gap="10px"
-                        margin="0 auto"
+                        margin="10px auto 0"
                     >
                         <Heading size="lg">{project.title}</Heading>
                         <Text
                             fontSize="md"
                             fontWeight="medium"
-                            textAlign="center"
+                            textAlign="left"
                         >
                             {project.description}
                         </Text>

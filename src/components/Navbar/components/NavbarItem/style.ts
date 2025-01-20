@@ -3,7 +3,8 @@ import styled from "styled-components";
 
 export const NavbarItemContainer = styled(Flex)`
     flex-direction: column;
-    transition: 100ms ease-in-out, transform 200ms ease-in-out;
+    transition: 100ms ease-in-out, transform 200ms ease-in-out,
+        top 300ms ease-in-out;
     position: relative;
 
     padding: 12px;
@@ -11,6 +12,7 @@ export const NavbarItemContainer = styled(Flex)`
 
     &:hover {
         transform: scale(1.1);
+        padding-top: 15px;
     }
 
     &:active {

@@ -1,7 +1,6 @@
-import { Flex } from "@chakra-ui/react";
 import styled from "styled-components";
 
-export const NavbarContainer = styled(Flex)<{ isVisible: boolean }>`
+export const NavbarContainer = styled.nav<{ isVisible: boolean }>`
     width: ${({ isVisible }) => (isVisible ? "800px" : "300px")};
     gap: ${({ isVisible }) => (isVisible ? "0" : "10px")};
     height: 60px;
@@ -15,6 +14,7 @@ export const NavbarContainer = styled(Flex)<{ isVisible: boolean }>`
 
     transition: 300ms;
 
+    display: flex;
     justify-content: space-around;
     align-items: center;
 
