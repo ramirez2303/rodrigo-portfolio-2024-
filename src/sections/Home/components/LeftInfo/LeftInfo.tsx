@@ -46,7 +46,7 @@ const LeftInfo = () => {
     // };
 
     return (
-        <Stack gap="0px">
+        <Stack gap="0px" maxW="360px">
             <Stack gap="0px">
                 <Heading as="h1" fontSize="3xl" fontWeight="bold" mb="15px">
                     Rodrigo Exequiel Ramirez
@@ -61,7 +61,7 @@ const LeftInfo = () => {
                     Desarrollador Frontend
                 </Heading>
             </Stack>
-            <Stack gap="10px" mt="15px" maxW="260px">
+            <Stack gap="10px" mt="15px">
                 <Flex
                     gap="20px"
                     justifyContent="flex-start"
@@ -70,8 +70,10 @@ const LeftInfo = () => {
                     <Link
                         href="https://www.linkedin.com/in/rodrigo-ramirez-b643b9215/"
                         target="_blank"
+                        width="100%"
                     >
                         <Button
+                            width="100%"
                             size="md"
                             borderColor="#e1e1e1"
                             _hover={{ bgColor: "rgba(141, 65, 65, 0.3)" }}
@@ -90,8 +92,13 @@ const LeftInfo = () => {
                             </Text>
                         </Button>
                     </Link>
-                    <Link href="https://github.com/ramirez2303" target="_blank">
+                    <Link
+                        href="https://github.com/ramirez2303"
+                        target="_blank"
+                        width="100%"
+                    >
                         <Button
+                            width="100%"
                             size="md"
                             borderColor="#e1e1e1"
                             _hover={{ bgColor: "rgba(141, 65, 65, 0.3)" }}

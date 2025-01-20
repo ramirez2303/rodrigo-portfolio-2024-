@@ -3,9 +3,13 @@ import LeftInfo from "./components/LeftInfo";
 import RightInfo from "./components/RightInfo";
 import { AnimatedContainer, HomeContainer } from "./style";
 
-const Home = () => {
+type HomeProps = {
+    homeRef: (node?: Element | null) => void;
+};
+
+const Home = ({ homeRef }: HomeProps) => {
     return (
-        <HomeContainer id="home">
+        <HomeContainer id="home" ref={homeRef}>
             <AnimatedContainer
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -20,7 +24,6 @@ const Home = () => {
                     <LeftInfo />
                     <RightInfo />
                 </Flex>
-                {/* <BottomInfo /> */}
             </AnimatedContainer>
         </HomeContainer>
     );

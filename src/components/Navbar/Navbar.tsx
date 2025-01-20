@@ -18,8 +18,9 @@ const Navbar = ({ isVisible }: NavbarProps) => {
 
     return (
         <NavbarContainer isVisible={isVisible}>
-            {navbarItems.map((item) => (
+            {navbarItems.map((item, ix) => (
                 <NavbarItem
+                    key={`${item.text}-${ix}`}
                     text={item.text}
                     link={item.link}
                     icon={item.icon}
