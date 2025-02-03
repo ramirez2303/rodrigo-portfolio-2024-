@@ -4,6 +4,7 @@ import AboutMe from "./sections/AboutMe";
 import Projects from "./sections/Projects";
 import Experience from "./sections/Experience";
 import { useInView } from "react-intersection-observer";
+import Contact from "./sections/Contact";
 
 function App() {
     const { ref, inView } = useInView({
@@ -17,6 +18,7 @@ function App() {
             <AboutMe />
             <Projects />
             <Experience />
+            <Contact />
         </Layout>
     );
 }

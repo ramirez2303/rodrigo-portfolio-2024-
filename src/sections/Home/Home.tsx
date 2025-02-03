@@ -19,7 +19,7 @@ const Home = ({ homeRef }: HomeProps) => {
                     width="100%"
                     justifyContent="space-between"
                     alignItems="center"
-                    mt="-100px"
+                    mt="-50px"
                 >
                     <LeftInfo />
                     <RightInfo />

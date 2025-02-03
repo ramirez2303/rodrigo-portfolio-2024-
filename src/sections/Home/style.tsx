@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import styled from "styled-components";
-import homeBg from "../../assets/home-bg.webp";
+import homeBg from "../../assets/home-background.png";
 
 export const HomeContainer = styled(motion.section)`
     width: 100vw;
@@ -10,6 +10,7 @@ export const HomeContainer = styled(motion.section)`
     align-items: center;
     gap: 50px;
     background-color: rgba(141, 65, 65, 0.25);
+    position: relative;
 
     &::before {
         content: "";
@@ -21,8 +22,7 @@ export const HomeContainer = styled(motion.section)`
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        filter: blur(2px);
-        opacity: 0.07;
+        opacity: 0.3;
     }
 `;
 
