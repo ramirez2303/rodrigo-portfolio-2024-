@@ -1,7 +1,8 @@
-import { Flex, Heading, Stack } from "@chakra-ui/react";
+import { Flex, For, Heading, Stack } from "@chakra-ui/react";
 import { ExperienceWrapper } from "./style";
 import { TimelineRoot } from "@/components/ui/timeline";
 import ExperenciesCard from "./components/ExperenciesCard";
+import { experiencesData } from "./data";
 
 const Experience = () => {
     return (
@@ -21,28 +22,16 @@ const Experience = () => {
                         variant="outline"
                         colorPalette="white"
                     >
-                        <ExperenciesCard
-                            title="Libro de Pases"
-                            position="Desarrollador Frontend React SSR"
-                            date="Agosto 2022 - Diciembre 2024 (más de 2 años)"
-                            description="Desarrollo de proyectos web con enfoque
-                                        en el ámbito futbolístico, orientados a
-                                        proporcionar herramientas de gestión y
-                                        conexión en el mercado futbolístico.
-                                        Colaboración en equipo aplicando
-                                        metodologías ágiles (Agile)"
-                        />
-                        <ExperenciesCard
-                            title="Biting"
-                            position="Desarrollador Frontend React Junior"
-                            date="Mayo 2022 - Julio 2022 (3 meses)"
-                            description="Desarrollo de proyectos web con enfoque
-                                        en el ámbito futbolístico, orientados a
-                                        proporcionar herramientas de gestión y
-                                        conexión en el mercado futbolístico.
-                                        Colaboración en equipo aplicando
-                                        metodologías ágiles (Agile)"
-                        />
+                        <For each={experiencesData}>
+                            {(experiencesData) => (
+                                <ExperenciesCard
+                                    title={experiencesData.title}
+                                    position={experiencesData.position}
+                                    date={experiencesData.date}
+                                    description={experiencesData.description}
+                                />
+                            )}
+                        </For>
                     </TimelineRoot>
                 </Flex>
             </Stack>

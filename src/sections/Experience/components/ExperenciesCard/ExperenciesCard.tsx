@@ -5,6 +5,7 @@ import {
     TimelineTitle,
 } from "@/components/ui/timeline";
 import { Stack, Text } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 
 type ExperenciesCardProps = {
     title: string;
@@ -19,6 +20,7 @@ const ExperenciesCard = ({
     date,
     description,
 }: ExperenciesCardProps) => {
+    const { t } = useTranslation();
     return (
         <TimelineItem colorPalette="white" mb={10}>
             <TimelineConnector
@@ -34,17 +36,17 @@ const ExperenciesCard = ({
                 boxShadow="rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px"
             >
                 <TimelineTitle as="h4" fontSize="2xl" fontWeight="bold">
-                    {title}
+                    {t(title)}
                 </TimelineTitle>
                 <Stack>
                     <Text fontSize="lg" fontWeight="bold">
-                        {position}
+                        {t(position)}
                     </Text>
                     <Text fontSize="md" fontWeight="medium" mt="-7px">
-                        {date}
+                        {t(date)}
                     </Text>
                     <Text fontSize="md" fontWeight="medium">
-                        {description}
+                        {t(description)}
                     </Text>
                 </Stack>
             </TimelineContent>
