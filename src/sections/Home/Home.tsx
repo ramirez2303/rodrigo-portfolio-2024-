@@ -1,6 +1,6 @@
 import { Flex } from "@chakra-ui/react";
-import LeftInfo from "./components/LeftInfo";
-import RightInfo from "./components/RightInfo";
+import HomeInfo from "./components/HomeInfo";
+import HomeAvatar from "./components/HomeAvatar";
 import { AnimatedContainer, HomeContainer } from "./style";
 
 type HomeProps = {
@@ -21,8 +21,8 @@ const Home = ({ homeRef }: HomeProps) => {
                     alignItems="center"
                     mt="-50px"
                 >
-                    <LeftInfo />
-                    <RightInfo />
+                    <HomeInfo />
+                    <HomeAvatar />
                 </Flex>
             </AnimatedContainer>
         </HomeContainer>

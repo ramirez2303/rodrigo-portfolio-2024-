@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export const NavbarContainer = styled.nav<{ isVisible: boolean }>`
-    width: ${({ isVisible }) => (isVisible ? "800px" : "300px")};
-    gap: ${({ isVisible }) => (isVisible ? "0" : "10px")};
+export const NavbarContainer = styled.nav<{ $isVisible: boolean }>`
+    width: ${({ $isVisible: isVisible }) => (isVisible ? "800px" : "300px")};
+    gap: ${({ $isVisible: isVisible }) => (isVisible ? "0" : "10px")};
     height: 60px;
     margin: 0 auto;
     position: fixed;

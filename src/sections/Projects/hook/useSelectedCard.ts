@@ -43,7 +43,7 @@ const useSelectedCard = () => {
         setActiveCard(el);
 
         Flip.from(state, {
-            duration: 0.3,
+            duration: 0.4,
             absolute: true,
             ease: "power1.inOut",
         });

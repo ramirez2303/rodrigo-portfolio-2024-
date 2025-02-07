@@ -1,11 +1,13 @@
 import { Tabs } from "@chakra-ui/react";
 import { Fragment } from "react";
+import { useTranslation } from "react-i18next";
 
 type TriggerProps = {
     values: { value: string; label: string };
 };
 
 const Trigger = ({ values }: TriggerProps) => {
+    const { t } = useTranslation();
     return (
         <Fragment>
             <Tabs.Trigger
@@ -14,7 +16,7 @@ const Trigger = ({ values }: TriggerProps) => {
                 fontSize="xl"
                 fontWeight="bold"
             >
-                {values.label}
+                {t(values.label)}
             </Tabs.Trigger>
         </Fragment>
     );

@@ -1,5 +1,5 @@
 import { tabType } from "@/utils/types";
-import { For, Image, Link, Stack, Text } from "@chakra-ui/react";
+import { For, Text } from "@chakra-ui/react";
 import { useEffect } from "react";
 import {
     AnimatedTabContainer,
@@ -7,16 +7,22 @@ import {
     ContentContainer,
 } from "./style";
 import { animate, useMotionValue } from "motion/react";
-import { Tooltip } from "@/components/ui/tooltip";
-import balcarceBg from "../../../../../assets/la-barrosa-1.jpg";
+import AnimatedImages from "./components/AnimatedImages";
+import AboutMeInfo from "./components/AboutMeInfo";
+import { useTranslation } from "react-i18next";
 
 type ContentProps = {
     values: tabType;
 };
 
 const Content = ({ values }: ContentProps) => {
+    const { t } = useTranslation();
     const isAboutMe = values.value === "aboutMe";
     const isLibraries = values.value === "libraries";
+    const animatedImages = [
+        ...(values?.content ?? []),
+        ...(values?.content ?? []),
+    ];
     const xTranslation = useMotionValue(0);
 
     useEffect(() => {
@@ -33,90 +39,33 @@ const Content = ({ values }: ContentProps) => {
 
     return (
         <ContentContainer value={values.value}>
-            <Stack alignItems="center" maxW="800px" minH="120px" maxH="120px">
-                <Text
-                    fontSize="lg"
-                    fontWeight="medium"
-                    textAlign="left"
-                    opacity={0.9}
-                >
-                    {values.description}
-                </Text>
-            </Stack>
-            {values?.content?.length && (
+            <Text
+                fontSize="lg"
+                fontWeight="medium"
+                textAlign="left"
+                opacity={0.9}
+                minH="120px"
+            >
+                {t(values.description)}
+            </Text>
+            {!isAboutMe && (
                 <AnimatedTabContainer>
                     <AnimatedContainer style={{ x: xTranslation }}>
-                        <For
-                            each={[
-                                ...(values?.content ?? []),
-                                ...(values?.content ?? []),
-                            ]}
-                        >
-                            {(item) => (
-                                <Link
-                                    key={item.name}
-                                    href={item.link}
-                                    target="_blank"
-                                >
-                                    <Tooltip
-                                        content={item.name}
-                                        openDelay={100}
-                                        portalled
-                                        showArrow
-                                    >
-                                        <Stack
-                                            justifyContent="center"
-                                            align="center"
-                                            maxW="100px"
-                                            gap="10px"
-                                            transition="200ms"
-                                            _hover={{
-                                                transform: "scale(1.1)",
-                                                opacity: 0.6,
-                                            }}
-                                        >
-                                            <Image
-                                                src={item.icon}
-                                                alt={item.name}
-                                                w="50px"
-                                                h="50px"
-                                                maxW="50px"
-                                                maxH="50px"
-                                                objectFit="contain"
-                                                borderRadius={
-                                                    isLibraries ? "full" : ""
-                                                }
-                                            />
-                                        </Stack>
-                                    </Tooltip>
-                                </Link>
+                        <For each={animatedImages}>
+                            {(item, ix) => (
+                                <AnimatedImages
+                                    key={item.name + ix}
+                                    name={item.name}
+                                    icon={item.icon}
+                                    link={item.link}
+                                    isLibraries={isLibraries}
+                                />
                             )}
                         </For>
                     </AnimatedContainer>
                 </AnimatedTabContainer>
             )}
-            {isAboutMe && (
-                <>
-                    <Image
-                        src={balcarceBg}
-                        w="200px"
-                        h="200px"
-                        borderRadius="full"
-                        mt="-10px"
-                    />
-                    <Text
-                        fontSize="lg"
-                        fontWeight="medium"
-                        textAlign="center"
-                        maxW="800px"
-                        opacity={0.9}
-                    >
-                        Apasionado por el desarrollo frontend y siempre estoy
-                        buscando aprender nuevas tecnologías y mejorar mis
-                        habilidades. 🤩
-                    </Text>
-                </>
-            )}
+            {isAboutMe && <AboutMeInfo />}
         </ContentContainer>
     );
 };

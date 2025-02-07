@@ -19,6 +19,7 @@ const ContactButton = ({ icons }: ContactButtonProps) => {
         >
             <Link href={link1} target="_blank">
                 <ChakraIcon
+                    as={Icon1}
                     width="45px"
                     height="45px"
                     color="#e1e1e1"
@@ -28,12 +29,11 @@ const ContactButton = ({ icons }: ContactButtonProps) => {
                         color: "rgba(107, 164, 238, 0.7)",
                         transform: "scale(1.1)",
                     }}
-                >
-                    <Icon1 />
-                </ChakraIcon>
+                />
             </Link>
             <Link href={link2} target="_blank">
                 <ChakraIcon
+                    as={Icon2}
                     width="45px"
                     height="45px"
                     color="#e1e1e1"
@@ -43,9 +43,7 @@ const ContactButton = ({ icons }: ContactButtonProps) => {
                         color: "rgba(107, 164, 238, 0.7)",
                         transform: "scale(1.1)",
                     }}
-                >
-                    <Icon2 />
-                </ChakraIcon>
+                />
             </Link>
         </Flex>
     );

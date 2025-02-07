@@ -14,7 +14,7 @@ type ProjectImageProps = {
 
 const ProjectImage = ({ image, links, isSelected }: ProjectImageProps) => {
     return (
-        <CardImage image={image} isSelected={isSelected}>
+        <CardImage $image={image} $isSelected={isSelected}>
             <ExternalIconContainer>
                 <Link
                     href={links.project}

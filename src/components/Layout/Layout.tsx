@@ -1,9 +1,9 @@
 import Navbar from "../Navbar";
-import { ArrowContainer, LayoutContainer, LayoutWrapper } from "./style";
-import { ReactNode } from "react";
-import { AnimatePresence } from "motion/react";
-import { BiSolidUpArrow } from "react-icons/bi";
+import { LayoutContainer, LayoutWrapper } from "./style";
+import { Fragment, ReactNode } from "react";
 import { Toaster } from "../ui/toaster";
+import ScrollToTop from "../ScrollToTop";
+import ChangeLanguage from "../ChangeLanguage";
 
 type LayoutProps = {
     children: ReactNode;
@@ -11,19 +11,16 @@ type LayoutProps = {
 };
 
 const Layout = ({ children, visible }: LayoutProps) => {
-    const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
-
     return (
-        <AnimatePresence>
+        <Fragment>
             <LayoutWrapper>
+                <ChangeLanguage />
                 <Navbar isVisible={visible} />
                 <LayoutContainer>{children}</LayoutContainer>
-                <ArrowContainer onClick={scrollToTop} visible={visible}>
-                    <BiSolidUpArrow id="arrowIcon" size="24px" />
-                </ArrowContainer>
+                <ScrollToTop visible={visible} />
             </LayoutWrapper>
             <Toaster />
-        </AnimatePresence>
+        </Fragment>
     );
 };
 

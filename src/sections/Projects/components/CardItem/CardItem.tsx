@@ -1,9 +1,8 @@
-import { Flex, For, Heading, Stack, Text } from "@chakra-ui/react";
+import { Stack } from "@chakra-ui/react";
 import { CardItemContainer } from "./style";
 import { projectType } from "@/utils/types";
-import { motion } from "motion/react";
-import { Tag } from "@/components/ui/tag";
 import ProjectImage from "./components/ProjectImage";
+import ProjectContent from "./components/ProjectContent";
 
 type CardItemProps = {
     project: projectType;
@@ -40,56 +39,7 @@ const CardItem = ({
                     links={project.links}
                     isSelected={isSelected}
                 />
-                <motion.div
-                    initial={{ display: "none", opacity: 0 }}
-                    animate={{
-                        display: isSelected ? "block" : "none",
-                        opacity: isSelected ? 1 : 0,
-                    }}
-                    transition={{
-                        duration: isSelected ? 0.7 : 0.1,
-                        delay: isSelected ? 0.2 : 0,
-                    }}
-                >
-                    <Stack
-                        maxW="80%"
-                        justifyContent="center"
-                        alignItems="center"
-                        gap="10px"
-                        margin="10px auto 0"
-                    >
-                        <Heading size="lg">{project.title}</Heading>
-                        <Text
-                            fontSize="md"
-                            fontWeight="medium"
-                            textAlign="left"
-                        >
-                            {project.description}
-                        </Text>
-                        <Flex
-                            justifyContent="center"
-                            alignItems="center"
-                            gap="10px"
-                            mt="5px"
-                        >
-                            <For each={project.tools}>
-                                {(item, ix) => (
-                                    <Tag
-                                        key={ix}
-                                        size="lg"
-                                        colorPalette="red"
-                                        bgColor="transparent"
-                                        color="#f2f2f2"
-                                        padding="4px 12px"
-                                        fontWeight="bold"
-                                    >
-                                        {item}
-                                    </Tag>
-                                )}
-                            </For>
-                        </Flex>
-                    </Stack>
-                </motion.div>
+                <ProjectContent {...project} isSelected={isSelected} />
             </Stack>
         </CardItemContainer>
     );

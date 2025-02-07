@@ -1,3 +1,5 @@
-export const redirectToWpp = () => {
-    window.open("https://wa.me/2266537973", "_blank");
-}
+import i18next from "i18next";
+
+export const changeLanguage = () => {
+    i18next.changeLanguage(i18next.resolvedLanguage === "es" ? "en" : "es");
+};

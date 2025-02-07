@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import NavbarItem from "./components/NavbarItem";
 import { NavbarContainer } from "./style";
 import { BsBook, BsGlobeAmericas, BsHammer, BsMailbox } from "react-icons/bs";
@@ -8,22 +9,27 @@ type NavbarProps = {
 };
 
 const Navbar = ({ isVisible }: NavbarProps) => {
+    const { t } = useTranslation();
     const navbarItems = [
-        { text: "Inicio", link: "#home", icon: <HiOutlineHome /> },
-        { text: "Sobre Mi", link: "#aboutMe", icon: <BsBook /> },
-        { text: "Proyectos", link: "#projects", icon: <BsGlobeAmericas /> },
-        { text: "Experiencia", link: "#experience", icon: <BsHammer /> },
-        { text: "Contacto", link: "#contact", icon: <BsMailbox /> },
+        { text: t("home"), link: "#home", IconComponent: HiOutlineHome },
+        { text: t("aboutMe"), link: "#aboutMe", IconComponent: BsBook },
+        {
+            text: t("projects"),
+            link: "#projects",
+            IconComponent: BsGlobeAmericas,
+        },
+        { text: t("experience"), link: "#experience", IconComponent: BsHammer },
+        { text: t("contact"), link: "#contact", IconComponent: BsMailbox },
     ];
 
     return (
-        <NavbarContainer isVisible={isVisible}>
+        <NavbarContainer $isVisible={isVisible}>
             {navbarItems.map((item, ix) => (
                 <NavbarItem
                     key={`${item.text}-${ix}`}
                     text={item.text}
                     link={item.link}
-                    icon={item.icon}
+                    IconComponent={item.IconComponent}
                     isVisible={isVisible}
                 />
             ))}

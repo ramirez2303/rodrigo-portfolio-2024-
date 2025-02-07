@@ -35,37 +35,25 @@ export const ProjectsGridContainer = styled(Box)`
         margin-left: 50px;
         &:active {
             box-shadow: rgba(0, 0, 0, 0.4) 0px 22px 70px 4px;
-            transition: transform 300ms ease-in-out,
-                box-shadow 300ms ease-in-out;
+            transition: transform 600ms ease-in-out,
+                box-shadow 400ms ease-in-out;
             transform: scale(0.99);
         }
     }
 
     .card[data-grid="img-2"] {
         grid-area: img-2;
-        /* &:hover {
-            margin-bottom: 10px;
-        } */
     }
 
     .card[data-grid="img-3"] {
         grid-area: img-3;
-        /* &:hover {
-            margin-bottom: 10px;
-        } */
     }
 
     .card[data-grid="img-4"] {
         grid-area: img-4;
-        /* &:hover {
-            margin-bottom: 10px;
-        } */
     }
 
     .card[data-grid="img-5"] {
         grid-area: img-5;
-        /* &:hover {
-            margin-bottom: 10px;
-        } */
     }
 `;
