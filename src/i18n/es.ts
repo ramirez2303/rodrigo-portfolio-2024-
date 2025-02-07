@@ -42,4 +42,10 @@ export const es = {
     experienceCard2Date: "Mayo 2022 - Julio 2022 (3 meses)",
     experienceCard2Description:
         "Desarrollo de proyectos web con enfoque en el ámbito futbolístico, orientados a proporcionar herramientas de gestión y conexión en el mercado futbolístico. Colaboración en equipo aplicando metodologías ágiles (Agile)",
+
+    // Contact
+    contactMe: "Contactame por",
+    or: "O",
+    leaveMessage: "Dejame un mensaje",
+    mailCopied: "Mail copiado!",
 };

@@ -5,8 +5,10 @@ import {
 } from "@/components/ui/clipboard";
 import { InputGroup } from "@/components/ui/input-group";
 import { toaster } from "@/components/ui/toaster";
+import { useTranslation } from "react-i18next";
 
 const ClipboardButton = () => {
+    const { t } = useTranslation();
     return (
         <ClipboardRoot
             maxW="230px"
@@ -21,7 +23,7 @@ const ClipboardButton = () => {
                         me="-2"
                         onClick={() => {
                             toaster.create({
-                                title: `Mail copiado!`,
+                                title: t("mailCopied"),
                                 type: "success",
                             });
                         }}

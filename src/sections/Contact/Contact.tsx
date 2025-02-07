@@ -6,8 +6,10 @@ import { TbMailFilled } from "react-icons/tb";
 import { FaLinkedin } from "react-icons/fa";
 import { VscGithubInverted } from "react-icons/vsc";
 import ClipboardButton from "./components/ClipboardButton";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+    const { t } = useTranslation();
     return (
         <ContactWrapper id="contact">
             <Stack
@@ -18,7 +20,7 @@ const Contact = () => {
                 gap={10}
             >
                 <Heading as="h2" size="3xl" fontWeight="bold">
-                    Contactame por
+                    {t("contactMe")}
                 </Heading>
                 <ContactButton
                     icons={[
@@ -39,10 +41,10 @@ const Contact = () => {
                         gap={5}
                     >
                         <Heading as="h4" size="lg" fontWeight="bold">
-                            O
+                            {t("or")}
                         </Heading>
                         <Heading as="h4" size="xl" fontWeight="bold">
-                            Dejame un mensaje
+                            {t("leaveMessage")}
                         </Heading>
                     </Stack>
                     <ContactButton

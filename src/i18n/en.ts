@@ -39,4 +39,10 @@ export const en = {
     experienceCard2Date: "May 2022 - July 2022 (3 months)",
     experienceCard2Description:
         "Development of web projects with a focus on the football field, aimed at providing management and connection tools in the football market. Collaboration in a team applying agile methodologies (Agile)",
+
+    // Contact
+    contactMe: "Contact me by",
+    or: "Or",
+    leaveMessage: "Leave a message",
+    mailCopied: "Mail copied!",
 };
