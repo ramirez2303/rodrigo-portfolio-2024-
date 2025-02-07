@@ -16,10 +16,12 @@ const Home = ({ homeRef }: HomeProps) => {
                 transition={{ duration: 1 }}
             >
                 <Flex
+                    flexDirection={["column", "column", "row"]}
                     width="100%"
                     justifyContent="space-between"
                     alignItems="center"
-                    mt="-50px"
+                    mt={["-100px", "-50px"]}
+                    gap={[150, 0]}
                 >
                     <HomeInfo />
                     <HomeAvatar />

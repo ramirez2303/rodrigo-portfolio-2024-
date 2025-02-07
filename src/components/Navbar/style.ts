@@ -25,4 +25,9 @@ export const NavbarContainer = styled.nav<{ $isVisible: boolean }>`
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5.5px);
     border: 1px solid rgba(18, 25, 96, 0.15);
+
+    @media (max-width: 768px) {
+        top: auto;
+        bottom: 20px;
+    }
 `;

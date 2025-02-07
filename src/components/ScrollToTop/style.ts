@@ -19,6 +19,10 @@ export const ArrowContainer = styled(motion.div)<{ visible: boolean }>`
         opacity 300ms;
     cursor: pointer;
 
+    @media (max-width: 768px) {
+        display: none;
+    }
+
     &:hover {
         background-color: rgba(225, 225, 225, 0.2);
         #arrowIcon {

@@ -20,6 +20,11 @@ export const HomeAvatarContainer = styled.div`
         opacity: 0.8;
         animation: rotate 30s linear infinite;
 
+        @media (max-width: 768px) {
+            width: 300px;
+            height: 300px;
+        }
+
         @keyframes rotate {
             from {
                 transform: rotate(0deg);
@@ -39,4 +44,9 @@ export const HomeImage = styled.img`
     z-index: 2;
     position: relative;
     border: 5px solid rgba(141, 65, 65, 0.8);
+
+    @media (max-width: 768px) {
+        width: 150px;
+        height: 150px;
+    }
 `;
