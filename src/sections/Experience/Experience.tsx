@@ -9,8 +9,18 @@ const Experience = () => {
     const { t } = useTranslation();
     return (
         <ExperienceWrapper id="experience">
-            <Stack maxW="800px" justify="flex-start" alignItems="center" mt={5}>
-                <Heading as="h2" size="3xl" fontWeight="bold" mb="10">
+            <Stack
+                maxW={["auto", "800px"]}
+                justify="flex-start"
+                alignItems="center"
+                mt={5}
+            >
+                <Heading
+                    as="h2"
+                    size={["2xl", "3xl"]}
+                    fontWeight="bold"
+                    mb="10"
+                >
                     {t("experienceTitle")}
                 </Heading>
                 <Flex

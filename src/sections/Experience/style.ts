@@ -12,6 +12,8 @@ export const ExperienceWrapper = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
+    padding: 0px 30px;
 
     position: relative;
 `;

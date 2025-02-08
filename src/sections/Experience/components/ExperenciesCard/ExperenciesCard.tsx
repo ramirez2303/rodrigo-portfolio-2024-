@@ -35,17 +35,21 @@ const ExperenciesCard = ({
                 position="relative"
                 boxShadow="rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px"
             >
-                <TimelineTitle as="h4" fontSize="2xl" fontWeight="bold">
+                <TimelineTitle
+                    as="h4"
+                    fontSize={["xl", "2xl"]}
+                    fontWeight="bold"
+                >
                     {t(title)}
                 </TimelineTitle>
                 <Stack>
-                    <Text fontSize="lg" fontWeight="bold">
+                    <Text fontSize={["md", "lg"]} fontWeight="bold">
                         {t(position)}
                     </Text>
-                    <Text fontSize="md" fontWeight="medium" mt="-7px">
+                    <Text fontSize={["sm", "md"]} fontWeight="medium" mt="-7px">
                         {t(date)}
                     </Text>
-                    <Text fontSize="md" fontWeight="medium">
+                    <Text fontSize={["sm", "md"]} fontWeight="medium">
                         {t(description)}
                     </Text>
                 </Stack>
