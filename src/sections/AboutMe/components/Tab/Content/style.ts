@@ -25,6 +25,10 @@ export const AnimatedTabContainer = styled(Flex)`
     background-color: rgba(141, 65, 65, 0.4);
     box-shadow: rgba(0, 0, 0, 0.12) 0px 19px 38px,
         rgba(0, 0, 0, 0.08) 0px 15px 12px;
+
+    @media (max-width: 768px) {
+        max-width: calc(100vw - 60px);
+    }
 `;
 
 export const AnimatedContainer = styled(motion.div)`

@@ -8,15 +8,15 @@ const AboutMeInfo = () => {
         <>
             <Image
                 src={balcarceBg}
-                w="200px"
-                h="200px"
+                w={["150px", "200px"]}
+                h={["150px", "200px"]}
                 borderRadius="full"
                 mt="-10px"
             />
             <Text
-                fontSize="lg"
+                fontSize={["md", "lg"]}
                 fontWeight="medium"
-                textAlign="center"
+                textAlign="left"
                 maxW="800px"
                 opacity={0.9}
             >

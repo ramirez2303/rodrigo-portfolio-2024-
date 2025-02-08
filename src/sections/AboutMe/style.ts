@@ -18,7 +18,13 @@ export const KnowledgeWrapper = styled.section`
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+
+    @media (max-width: 768px) {
+        width: 100vw;
+        box-sizing: border-box;
+        padding: 0px 30px;
+    }
 `;
 
 export const KnowledgeContainer = styled(Stack)`
@@ -28,4 +34,11 @@ export const KnowledgeContainer = styled(Stack)`
     box-sizing: border-box;
     padding: 20px 0px 40px;
     margin-top: 20px;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        max-width: 100vw;
+        padding: 0;
+        margin-top: 40px;
+    }
 `;

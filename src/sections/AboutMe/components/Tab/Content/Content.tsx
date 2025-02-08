@@ -40,7 +40,7 @@ const Content = ({ values }: ContentProps) => {
     return (
         <ContentContainer value={values.value}>
             <Text
-                fontSize="lg"
+                fontSize={["md", "lg"]}
                 fontWeight="medium"
                 textAlign="left"
                 opacity={0.9}

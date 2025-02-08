@@ -21,7 +21,7 @@ const AboutMe = () => {
             opacity: 1,
             y: 0,
             transition: {
-                duration: 0.20,
+                duration: 0.2,
             },
         },
         inactive: {
@@ -41,9 +41,13 @@ const AboutMe = () => {
                     defaultValue="aboutMe"
                     variant="line"
                     onValueChange={() => toggleAnimation()}
+                    marginTop="100px"
                 >
                     <Tabs.List
-                        display="flex"
+                        display={["grid", "flex"]}
+                        gridTemplateColumns="repeat(2, 1fr)"
+                        rowGap={4}
+                        columnGap={4}
                         justifyContent="center"
                         alignItems="center"
                         border="none"

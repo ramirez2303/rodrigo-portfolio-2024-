@@ -11,9 +11,10 @@ const Trigger = ({ values }: TriggerProps) => {
     return (
         <Fragment>
             <Tabs.Trigger
+                w={["150px", "auto"]}
                 value={values.value}
                 color="#f8f0f0"
-                fontSize="xl"
+                fontSize={["lg", "xl"]}
                 fontWeight="bold"
             >
                 {t(values.label)}
