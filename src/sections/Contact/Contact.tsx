@@ -19,7 +19,7 @@ const Contact = () => {
                 m="180px auto 0px"
                 gap={10}
             >
-                <Heading as="h2" size="3xl" fontWeight="bold">
+                <Heading as="h2" size={["2xl", "3xl"]} fontWeight="bold">
                     {t("contactMe")}
                 </Heading>
                 <ContactButton

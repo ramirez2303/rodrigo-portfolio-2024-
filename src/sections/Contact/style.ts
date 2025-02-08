@@ -10,4 +10,8 @@ export const ContactWrapper = styled.div`
         rgba(141, 65, 65, 0.2) 20%,
         rgba(107, 164, 238, 0.2) 100%
     );
+
+    @media (max-width: 768px) {
+        margin: 0;
+    }
 `;
