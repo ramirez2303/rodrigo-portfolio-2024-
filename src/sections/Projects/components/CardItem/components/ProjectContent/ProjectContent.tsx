@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Flex, For, Heading, Stack, Text } from "@chakra-ui/react";
 import { Tag } from "@/components/ui/tag";
+import { useTranslation } from "react-i18next";
 
 type ProjectContentProps = {
     isSelected: boolean;
@@ -15,6 +16,7 @@ const ProjectContent = ({
     description,
     tools,
 }: ProjectContentProps) => {
+    const { t } = useTranslation();
     return (
         <motion.div
             initial={{ display: "none", opacity: 0 }}
@@ -36,7 +38,7 @@ const ProjectContent = ({
             >
                 <Heading size="lg">{title}</Heading>
                 <Text fontSize="md" fontWeight="medium" textAlign="left">
-                    {description}
+                    {t(description)}
                 </Text>
                 <Flex
                     justifyContent="center"

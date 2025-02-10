@@ -14,9 +14,11 @@ const Projects = () => {
 
     return (
         <ProjectsWrapper id="projects">
-            <Heading as="h2" size="2xl" fontWeight={700} mt="-120px">
-                {t("projects")}
-            </Heading>
+            {isMobile && (
+                <Heading as="h2" size="2xl" fontWeight={700} mt="-120px">
+                    {t("projects")}
+                </Heading>
+            )}
             <ProjectsGridContainer>
                 <For each={projects}>
                     {(project, ix) =>

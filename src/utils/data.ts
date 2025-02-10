@@ -10,6 +10,7 @@ import advice from "/src/assets/projects/advice.jpeg";
 import ecommerce from "/src/assets/projects/e-commerce.jpeg";
 import ecommerceReact from "/src/assets/projects/ecommerceFront.jpeg";
 import order from "/src/assets/projects/order.png";
+import huddleLandingPage from "/src/assets/projects/huddle-landing-page.png";
 
 const technologiesContent = [
     {
@@ -131,8 +132,7 @@ export const projects = [
     {
         image: ecommerceReact,
         title: "E-commerce React",
-        description:
-            "Una pagina de un producto de una fake e-commerce, con un carrusel y un carrito funcional, basada en el reto de la pagina Frontend Mentor",
+        description: "eCommerceReact",
         tools: ["React", "Javascript", "ChakraUI"],
         links: {
             project: "https://fake-e-commerce-product-page.vercel.app/",
@@ -142,8 +142,7 @@ export const projects = [
     {
         image: ecommerce,
         title: "E-commerce HTML",
-        description:
-            "Esta es una fake e-commerce de zapatillas, es solo diseño no es funcional",
+        description: "eCommerceHtml",
         tools: ["HTML", "Javascript", "CSS"],
         links: {
             project:
@@ -154,8 +153,7 @@ export const projects = [
     {
         image: advice,
         title: "Advice",
-        description:
-            "Esta es una fake e-commerce de zapatillas, es solo diseño no es funcional",
+        description: "advice",
         tools: ["React", "Javascript", "ChakraUI"],
         links: {
             project:
@@ -166,8 +164,7 @@ export const projects = [
     {
         image: order,
         title: "Order",
-        description:
-            "Esta es una pagina con un generador de consejos, conectado a una API proporcionada por Frontend Mentor, basada en el reto de esta misma pagina",
+        description: "order",
         tools: ["HTML", "CSS"],
         links: {
             project:
@@ -176,15 +173,14 @@ export const projects = [
         },
     },
     {
-        image: "",
-        title: "",
-        description:
-            "Esta es una fake e-commerce de zapatillas, es solo diseño no es funcional",
-        tools: ["React", "TypeScript", "Styled-components"],
+        image: huddleLandingPage,
+        title: "Huddle Landing Page",
+        description: "landingPage",
+        tools: ["HTML", "CSS"],
         links: {
             project:
-                "https://ramirez2303.github.io/Order-Cummary-Component-Challenge/",
-            github: "https://github.com/ramirez2303/Order-Cummary-Component-Challenge",
+                "https://ramirez2303.github.io/Huddle-Landing-Page-Challenge-/",
+            github: "https://github.com/ramirez2303/Huddle-Landing-Page-Challenge-",
         },
     },
 ];

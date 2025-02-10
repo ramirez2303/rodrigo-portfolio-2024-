@@ -28,6 +28,16 @@ export const es = {
     toolsDescription:
         "He trabajado con herramientas de desarrollo como Visual Studio Code, Git, GitHub, Figma, Jira, Postman, entre otras. Además, tengo experiencia en el uso de metodologías ágiles como Scrum",
 
+    // Projects
+    eCommerceReact:
+        "Una pagina de un producto de una fake e-commerce, con un carrusel y un carrito funcional, basada en el reto de la pagina Frontend Mentor.",
+    eCommerceHtml:
+        "Esta es una fake e-commerce de zapatillas, es solo diseño no es funcional.",
+    advice: "Esta es una pagina con un generador de consejos, conectado a una API proporcionada por Frontend Mentor, basada en el reto de esta misma pagina.",
+    order: "Resumen de compra de una app de música, basado en el reto de la pagina Frontend Mentor.",
+    landingPage:
+        "Una landing page para una red social, basado en el reto de la pagina Frontend Mentor.",
+
     // Experience
     experienceTitle: "Experiencias",
 
@@ -41,7 +51,7 @@ export const es = {
     experienceCard2Position: "Desarrollador Frontend React Junior",
     experienceCard2Date: "Mayo 2022 - Julio 2022 (3 meses)",
     experienceCard2Description:
-        "Desarrollo de proyectos web con enfoque en el ámbito futbolístico, orientados a proporcionar herramientas de gestión y conexión en el mercado futbolístico. Colaboración en equipo aplicando metodologías ágiles (Agile)",
+        "Proyectos web SaaS para ámbito futbolístico, desarrollando herramientas de gestión y conexión en el mercado futbolístico para instituciones/clubes. Colaboración en equipo aplicando metodologías ágiles (Agile)",
 
     // Contact
     contactMe: "Contactame por",
