@@ -5,7 +5,7 @@ import { KnowledgeContainer, KnowledgeWrapper, SectionBg } from "./style";
 import { For, Tabs } from "@chakra-ui/react";
 import { motion } from "motion/react";
 import { useState } from "react";
-import { tabs } from "@/utils/data";
+import { tabs } from "./data";
 
 const AboutMe = () => {
     const [restartAnimation, setRestartAnimation] = useState(true);

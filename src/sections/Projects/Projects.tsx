@@ -2,10 +2,10 @@ import { For, Heading } from "@chakra-ui/react";
 import { ProjectsGridContainer, ProjectsWrapper } from "./style";
 import CardItem from "./components/CardItem";
 import useSelectedCard from "./hook/useSelectedCard";
-import { projects } from "@/utils/data";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import MobileProjectsCards from "./components/MobileProjectsCards";
 import { useTranslation } from "react-i18next";
+import { projects } from "./data";
 
 const Projects = () => {
     const { t } = useTranslation();
