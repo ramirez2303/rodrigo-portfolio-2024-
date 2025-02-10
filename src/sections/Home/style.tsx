@@ -24,14 +24,20 @@ export const HomeContainer = styled(motion.section)`
         background-position: center;
         opacity: 0.3;
     }
+
+    @media (max-width: 768px) {
+        box-sizing: border-box;
+        padding: 0px 30px;
+    }
 `;
 
 export const AnimatedContainer = styled(motion.div)`
     max-width: 800px;
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     gap: 200px;
     z-index: 1;

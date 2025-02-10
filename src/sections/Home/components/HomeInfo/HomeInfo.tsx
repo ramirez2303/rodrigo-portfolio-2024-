@@ -5,7 +5,7 @@ import HomeCVButton from "./components/HomeCVButton";
 
 const HomeInfo = () => {
     return (
-        <Stack gap="0px" maxW="360px">
+        <Stack w="100%" gap="0px" maxW={["auto", "360px"]}>
             <HomeTexts />
             <Stack gap="15px" mt="15px">
                 <HomeButtons />

@@ -1,9 +1,10 @@
 import Navbar from "../Navbar";
 import { LayoutContainer, LayoutWrapper } from "./style";
-import { Fragment, ReactNode, useEffect, useState } from "react";
+import { Fragment, ReactNode } from "react";
 import { Toaster } from "../ui/toaster";
 import ScrollToTop from "../ScrollToTop";
 import ChangeLanguage from "../ChangeLanguage";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 type LayoutProps = {
     children: ReactNode;
@@ -11,19 +12,7 @@ type LayoutProps = {
 };
 
 const Layout = ({ children, visible }: LayoutProps) => {
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth <= 768);
-        };
-
-        window.addEventListener("resize", handleResize);
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
-
+    const { isMobile } = useIsMobile();
     const isVisible = visible && !isMobile;
 
     return (
