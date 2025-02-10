@@ -2,10 +2,10 @@ import { For, Heading } from "@chakra-ui/react";
 import { ProjectsGridContainer, ProjectsWrapper } from "./style";
 import CardItem from "./components/CardItem";
 import useSelectedCard from "./hook/useSelectedCard";
-import { projects } from "@/utils/data";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import MobileProjectsCards from "./components/MobileProjectsCards";
 import { useTranslation } from "react-i18next";
+import { projects } from "./data";
 
 const Projects = () => {
     const { t } = useTranslation();
@@ -14,9 +14,11 @@ const Projects = () => {
 
     return (
         <ProjectsWrapper id="projects">
-            <Heading as="h2" size="2xl" fontWeight={700} mt="-120px">
-                {t("projects")}
-            </Heading>
+            {isMobile && (
+                <Heading as="h2" size="2xl" fontWeight={700} mt="-120px">
+                    {t("projects")}
+                </Heading>
+            )}
             <ProjectsGridContainer>
                 <For each={projects}>
                     {(project, ix) =>

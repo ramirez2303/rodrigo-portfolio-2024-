@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import { projectType } from "@/utils/types";
 import { Icon, Image, Text } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 import { FiExternalLink } from "react-icons/fi";
 import { VscGithubInverted } from "react-icons/vsc";
 
@@ -20,6 +21,7 @@ type ProjectDialogProps = {
 };
 
 const ProjectDialog = ({ children, project }: ProjectDialogProps) => {
+    const { t } = useTranslation();
     return (
         <DialogRoot size="sm">
             <DialogBackdrop />
@@ -32,7 +34,7 @@ const ProjectDialog = ({ children, project }: ProjectDialogProps) => {
                 <DialogBody>
                     <Image src={project.image} alt={project.title} />
                     <Text fontSize="md" fontWeight="regular" marginTop="20px">
-                        {project.description}
+                        {t(project.description)}
                     </Text>
                 </DialogBody>
                 <DialogFooter>
