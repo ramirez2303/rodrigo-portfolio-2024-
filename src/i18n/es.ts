@@ -29,6 +29,7 @@ export const es = {
         "He trabajado con herramientas de desarrollo como Visual Studio Code, Git, GitHub, Figma, Jira, Postman, entre otras. Además, tengo experiencia en el uso de metodologías ágiles como Scrum",
 
     // Projects
+    podcastApp: "Desarrollo de una pagina web de podcast integrando la API de Podcast Index, con un reproductor de audio, una lista de episodios, un buscador de podcasts y un sistema de favoritos.",
     eCommerceReact:
         "Una pagina de un producto de una fake e-commerce, con un carrusel y un carrito funcional, basada en el reto de la pagina Frontend Mentor.",
     eCommerceHtml:
