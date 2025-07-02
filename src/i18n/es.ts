@@ -22,13 +22,14 @@ export const es = {
 
     libraries: "Librerías",
     librariesDescription:
-        "He trabajado con herramientas de desarrollo como Visual Studio Code, Git, GitHub, Figma, Jira, Postman, entre otras. Además, tengo experiencia en el uso de metodologías ágiles como ScrumTengo conocimientos en librerías en el desarrollo frontend. Algunas de las que manejo son Chakra UI, Material UI, Framer Motion, Styled-components, React Router, React Query, React Hook Form y Storybook.",
+        "Tengo conocimientos en librerías en el desarrollo frontend. Algunas de las que manejo son Chakra UI, Material UI, Framer Motion, Styled-components, React Router, Wouter, Tanstack Query, React Hook Form, Zustand, Redux y Storybook.",
 
     tools: "Herramientas",
     toolsDescription:
         "He trabajado con herramientas de desarrollo como Visual Studio Code, Git, GitHub, Figma, Jira, Postman, entre otras. Además, tengo experiencia en el uso de metodologías ágiles como Scrum",
 
     // Projects
+    podcastApp: "Desarrollo de una pagina web de podcast integrando la API de Podcast Index, con un reproductor de audio, una lista de episodios, un buscador de podcasts y un sistema de favoritos.",
     eCommerceReact:
         "Una pagina de un producto de una fake e-commerce, con un carrusel y un carrito funcional, basada en el reto de la pagina Frontend Mentor.",
     eCommerceHtml:

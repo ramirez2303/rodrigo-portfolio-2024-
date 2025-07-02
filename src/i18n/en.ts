@@ -20,12 +20,14 @@ export const en = {
         "I have used, both for personal projects to learn and within my work experience, React, TypeScript, JavaScript, CSS, and HTML. Creating attractive and functional user interfaces with the ability to translate requirements seeking clean and efficient code.",
     libraries: "Libraries",
     librariesDescription:
-        "I have worked with development tools such as Visual Studio Code, Git, GitHub, Figma, Jira, Postman, among others. In addition, I have experience in the use of agile methodologies such as Scrum. I have knowledge of libraries in frontend development. Some of the ones I handle are Chakra UI, Material UI, Framer Motion, Styled-components, React Router, React Query, React Hook Form, and Storybook.",
+        "I have knowledge of libraries in frontend development. Some of the ones I handle are Chakra UI, Material UI, Framer Motion, Styled-components, React Router, Wouter, Tanstack Query, React Hook Form, Zustand, Redux and Storybook.",
     tools: "Tools",
     toolsDescription:
         "I have worked with development tools such as Visual Studio Code, Git, GitHub, Figma, Jira, Postman, among others. In addition, I have experience in the use of agile methodologies such as Scrum",
 
     // Projects
+    podcastApp:
+        "Development of a podcast web page integrating the Podcast Index API, with an audio player, an episode list, a podcast search engine, and a favorites system.",
     eCommerceReact:
         "A product page of a fake e-commerce, with a carousel and a functional cart, based on the challenge from the Frontend Mentor website.",
     eCommerceHtml:

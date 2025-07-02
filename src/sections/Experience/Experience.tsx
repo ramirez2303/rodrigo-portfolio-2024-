@@ -35,8 +35,9 @@ const Experience = () => {
                         colorPalette="white"
                     >
                         <For each={experiencesData}>
-                            {(experiencesData) => (
+                            {(experiencesData, ix) => (
                                 <ExperenciesCard
+                                    key={ix}
                                     title={experiencesData.title}
                                     position={experiencesData.position}
                                     date={experiencesData.date}

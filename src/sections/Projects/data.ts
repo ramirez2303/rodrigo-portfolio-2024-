@@ -2,9 +2,19 @@ import advice from "/src/assets/projects/advice.jpeg";
 import ecommerce from "/src/assets/projects/e-commerce.jpeg";
 import ecommerceReact from "/src/assets/projects/ecommerceFront.jpeg";
 import order from "/src/assets/projects/order.png";
-import huddleLandingPage from "/src/assets/projects/huddle-landing-page.png";
+import podcastApp from "/src/assets/projects/podcast-app.jpeg";
 
 export const projects = [
+    {
+        image: podcastApp,
+        title: "Podcast App",
+        description: "podcastApp",
+        tools: ["React", "TailwindCSS", "Zustand", "TanStack Query"],
+        links: {
+            project: "https://ramirez2303.github.io/podcast-app/",
+            github: "https://github.com/ramirez2303/podcast-app",
+        },
+    },
     {
         image: ecommerceReact,
         title: "E-commerce React",
@@ -46,17 +56,6 @@ export const projects = [
             project:
                 "https://ramirez2303.github.io/Order-Cummary-Component-Challenge/",
             github: "https://github.com/ramirez2303/Order-Cummary-Component-Challenge",
-        },
-    },
-    {
-        image: huddleLandingPage,
-        title: "Huddle Landing Page",
-        description: "landingPage",
-        tools: ["HTML", "CSS"],
-        links: {
-            project:
-                "https://ramirez2303.github.io/Huddle-Landing-Page-Challenge-/",
-            github: "https://github.com/ramirez2303/Huddle-Landing-Page-Challenge-",
         },
     },
 ];

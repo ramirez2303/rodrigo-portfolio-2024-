@@ -2,7 +2,7 @@ import { Button, Flex, Link, Stack, Text } from "@chakra-ui/react";
 import { IconContainer } from "../../style";
 import { FaCloudDownloadAlt } from "react-icons/fa";
 import { useAnimate } from "framer-motion";
-import curriculum from "/src/assets/cv/rodrigoRamirezCV.pdf";
+import curriculum from "/src/assets/cv/rodrigo-ramirez-cv.pdf";
 import { useTranslation } from "react-i18next";
 
 const HomeCVButton = () => {
