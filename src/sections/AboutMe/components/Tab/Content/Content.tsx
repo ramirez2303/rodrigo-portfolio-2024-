@@ -57,7 +57,6 @@ const Content = ({ values }: ContentProps) => {
                                     key={item.name + ix}
                                     name={item.name}
                                     icon={item.icon}
-                                    link={item.link}
                                     isLibraries={isLibraries}
                                 />
                             )}

@@ -6,14 +6,10 @@ import { Fragment } from "react/jsx-runtime";
 
 type ProjectImageProps = {
     image: string;
-    links: {
-        project: string;
-        github?: string;
-    };
     isSelected: boolean;
 };
 
-const ProjectImage = ({ image, links, isSelected }: ProjectImageProps) => {
+const ProjectImage = ({ image, isSelected }: ProjectImageProps) => {
     return (
         <CardImage $image={image} $isSelected={isSelected}>
             <Fragment></Fragment>
