@@ -65,13 +65,13 @@ export const CardImage = styled.div<{ $image: string; $isSelected: boolean }>`
     background-repeat: no-repeat;
     position: relative;
 
-    ${({ $isSelected: isSelected }) =>
+    /* ${({ $isSelected: isSelected }) =>
         isSelected &&
         `
         &:hover {
             opacity: 0.6;
         }
-        `}
+        `} */
 `;
 
 export const ExternalIconContainer = styled.div`

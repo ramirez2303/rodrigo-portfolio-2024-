@@ -10,6 +10,7 @@ export const ProjectsWrapper = styled.section`
     align-items: center;
     gap: 20px;
     position: relative;
+    padding: 0 0 100px 0px;
 
     @media (max-width: 768px) {
         box-sizing: border-box;

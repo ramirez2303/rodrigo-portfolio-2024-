@@ -18,6 +18,7 @@ export type projectType = {
     tools: string[];
     links: {
         project: string;
-        github: string;
+        github?: string;
+        githubBackend?: string;
     };
 };

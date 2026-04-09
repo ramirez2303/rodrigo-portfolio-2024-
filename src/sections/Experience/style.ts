@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ExperienceWrapper = styled.section`
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
 
     background: linear-gradient(
         360deg,
@@ -11,9 +11,9 @@ export const ExperienceWrapper = styled.section`
     );
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     box-sizing: border-box;
-    padding: 0px 30px;
+    padding: 60px 30px;
 
     position: relative;
 `;

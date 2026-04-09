@@ -1,5 +1,6 @@
 import { Tooltip } from "@/components/ui/tooltip";
 import { Image, Link, Stack } from "@chakra-ui/react";
+import { Fragment } from "react/jsx-runtime";
 
 type AnimatedImagesProps = {
     name: string;
@@ -15,7 +16,7 @@ const AnimatedImages = ({
     isLibraries,
 }: AnimatedImagesProps) => {
     return (
-        <Link key={name} href={link} target="_blank">
+        <Fragment>
             <Tooltip content={name} openDelay={100} portalled showArrow>
                 <Stack
                     justifyContent="center"
@@ -40,7 +41,7 @@ const AnimatedImages = ({
                     />
                 </Stack>
             </Tooltip>
-        </Link>
+        </Fragment>
     );
 };
 

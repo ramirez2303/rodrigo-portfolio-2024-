@@ -6,12 +6,34 @@ import styledComponentsIcon from "/src/assets/styled-components.png";
 import reactQueryIcon from "/src/assets/react-query.png";
 import storybookIcon from "/src/assets/storybook.png";
 import jiraIcon from "/src/assets/jira.png";
+import nextjsIcon from "/src/assets/nextjs.webp";
+import nodejsIcon from "/src/assets/nodejs.png";
+import postgresqlIcon from "/src/assets/postgresql.png";
+import railwayIcon from "/src/assets/railway.png";
+import tailwindCssIcon from "/src/assets/tailwindcss.png";
+import vercelIcon from "/src/assets/vercel.webp";
+import jest from "/src/assets/jest.webp";
 
 const technologiesContent = [
     {
         name: "React",
         icon: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
         link: "https://reactjs.org/",
+    },
+    {
+        name: "Next js",
+        icon: nextjsIcon,
+        link: "https://nextjs.org/",
+    },
+    {
+        name: "Node js",
+        icon: nodejsIcon,
+        link: "https://nodejs.org/",
+    },
+    {
+        name: "PostgreSQL",
+        icon: postgresqlIcon,
+        link: "https://www.postgresql.org/",
     },
     {
         name: "HTML",
@@ -37,6 +59,21 @@ const technologiesContent = [
 
 const librariesContent = [
     {
+        name: "Tailwind Css",
+        icon: tailwindCssIcon,
+        link: "https://tailwindcss.com/",
+    },
+    {
+        name: "Tanstack Query",
+        icon: reactQueryIcon,
+        link: "https://react-query.tanstack.com/",
+    },
+    {
+        name: "Jest",
+        icon: jest,
+        link: "https://jestjs.io/",
+    },
+    {
         name: "Chakra UI",
         icon: chakraUIIcon,
         link: "https://chakra-ui.com/",
@@ -55,11 +92,6 @@ const librariesContent = [
         name: "styled-components",
         icon: styledComponentsIcon,
         link: "https://styled-components.com/",
-    },
-    {
-        name: "React Query",
-        icon: reactQueryIcon,
-        link: "https://react-query.tanstack.com/",
     },
     {
         name: "Storybook",
@@ -94,6 +126,16 @@ const toolsContent = [
         icon: jiraIcon,
         link: "https://www.atlassian.com/software/jira",
     },
+    {
+        name: "Railway",
+        icon: railwayIcon,
+        link: "https://railway.app/",
+    },
+    {
+        name: "Vercel",
+        icon: vercelIcon,
+        link: "https://vercel.com/",
+    }
 ];
 
 export const tabs: tabType[] = [
