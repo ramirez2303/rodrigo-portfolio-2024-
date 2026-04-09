@@ -45,13 +45,24 @@ const ProjectDialog = ({ children, project }: ProjectDialogProps) => {
                     >
                         <Icon as={FiExternalLink} fontSize="25px" />
                     </a>
-                    <a
-                        href={project.links.github}
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        <Icon as={VscGithubInverted} fontSize="25px" />
-                    </a>
+                    {project.links.github && (
+                        <a
+                            href={project.links.github}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <Icon as={VscGithubInverted} fontSize="25px" />
+                        </a>
+                    )}
+                    {project.links.githubBackend && (
+                        <a
+                            href={project.links.githubBackend}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <Icon as={VscGithubInverted} fontSize="25px" />
+                        </a>
+                    )}
                 </DialogFooter>
             </DialogContent>
         </DialogRoot>

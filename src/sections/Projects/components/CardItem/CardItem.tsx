@@ -36,7 +36,6 @@ const CardItem = ({
             >
                 <ProjectImage
                     image={project.image}
-                    links={project.links}
                     isSelected={isSelected}
                 />
                 <ProjectContent {...project} isSelected={isSelected} />

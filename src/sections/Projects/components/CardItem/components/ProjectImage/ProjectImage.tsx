@@ -1,21 +1,19 @@
-import { Link } from "@chakra-ui/react";
-import { CardImage, ExternalIconContainer } from "../../style";
-import { FiExternalLink } from "react-icons/fi";
-import { VscGithubInverted } from "react-icons/vsc";
+// import { Link } from "@chakra-ui/react";
+import { CardImage } from "../../style";
+// import { FiExternalLink } from "react-icons/fi";
+// import { VscGithubInverted } from "react-icons/vsc";
+import { Fragment } from "react/jsx-runtime";
 
 type ProjectImageProps = {
     image: string;
-    links: {
-        project: string;
-        github: string;
-    };
     isSelected: boolean;
 };
 
-const ProjectImage = ({ image, links, isSelected }: ProjectImageProps) => {
+const ProjectImage = ({ image, isSelected }: ProjectImageProps) => {
     return (
         <CardImage $image={image} $isSelected={isSelected}>
-            <ExternalIconContainer>
+            <Fragment></Fragment>
+            {/* <ExternalIconContainer>
                 <Link
                     href={links.project}
                     w="max-content"
@@ -24,15 +22,17 @@ const ProjectImage = ({ image, links, isSelected }: ProjectImageProps) => {
                 >
                     <FiExternalLink color="white" />
                 </Link>
-                <Link
-                    href={links.github}
-                    w="max-content"
-                    height="max-content"
-                    target="_blank"
-                >
-                    <VscGithubInverted color="white" />
-                </Link>
-            </ExternalIconContainer>
+                {!!links.github && (
+                    <Link
+                        href={links.github}
+                        w="max-content"
+                        height="max-content"
+                        target="_blank"
+                    >
+                        <VscGithubInverted color="white" />
+                    </Link>
+                )}
+            </ExternalIconContainer> */}
         </CardImage>
     );
 };
